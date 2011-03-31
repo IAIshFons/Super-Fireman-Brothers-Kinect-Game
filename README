@@ -1,0 +1,88 @@
+Super Fireman Brothers v0.1
+Authors: Ismael Mendonca, Alfonso Ros Dos Santos
+Release Date: 30/03/2011
+Project URL: 
+
+
+1) Prerequisites:
+
+
+    * You must have a Kinect device.
+    * This application is intended to be used in Ubuntu 10.04 lts, it could be extended to be used in Windows.
+    * The applicacion needs a little of processing power, we tested it in Dual core Laptops, it's not really 
+      a requisite, but it could run very slow in a poor machine.
+
+
+2) Instalation
+
+
+    First of all, you must be sure to have this packages:
+
+    * GCC 4.x
+    * Python 2.6+/3.x
+    * LibUSB 1.0.8
+    * OpenGL/GLUT
+
+    To install this packages in Ubuntu just run the following for the missing packages.
+
+    * sudo apt-get install g++ python libusb-1.0-0-dev freeglut3-dev libjpeg-dev libpng-dev libglu1-mesa-dev mesa-common-dev
+
+    Next you need to install the OpenNI. We used the unstable version. Here are the steps to install it. We use the git command so 
+    if you don't have it installed you cand run.
+
+    1. aptitude install git-core
+
+    Ok here are the steps to install OpenNI:
+
+    1. mkdir ~/Kinect && cd ~/Kinect
+    2. git clone https://github.com/OpenNI/OpenNI.git
+    3. cd OpenNI/Platform/Linux-x86/CreateRedist && ./RedistMaker
+    4. cd ../Redist && sudo ./install.sh
+
+    That's all. Now we have OpenNI installed. Now we can install the avin2 diver.
+
+    1. cd ~/Kinect
+    2. git clone https://github.com/avin2/SensorKinect.git
+    3. cd SensorKinect/Platform/Linux-x86/CreateRedist && ./RedistMaker
+    4. cd ../Redist && sudo ./install.sh
+
+    Now we need to install the NITE middleware. We used Nite 1.3.0.18 (Unstable).
+
+    1. go to this page and download the latest NITE.
+    2. Save the NITE tarball to ~/Kinect.
+    3. tar -jxvf NITE-Bin-Linux32-v1.3.0.18.tar.bz2
+    4. cd ~/kinect/NITE/Nite-1.3.0.18/Data
+    5. Edit all xml files and replace the license with this one "0KOIk2JeIBYClPWVnMoRKn5cdY4="
+    6. Also replace the MapOutputMode line to look like this "< MapOutputMode xRes="640" yRes="480" FPS="30"/>"
+    7. niLicense PrimeSense 0KOIk2JeIBYClPWVnMoRKn5cdY4=
+    8. cd ~/kinect/NITE/Nite-1.3.0.18/
+    9. sudo ./install.sh
+    10. make && sudo make install
+
+    All ready. Now we have the OpenNI, avin2 and NITE software installed. We only need to install GLM library to start playing.
+
+    1. mkdir ~/glm
+    2. Download the GLM library from this page and save it to ~/glm.
+    3. cd ~/glm && tar -zxvf glm-0.3.1.tar.gz
+    4. cd glm-0.3.1/
+    5. ./configure && make && sudo makeinstall
+
+    Finally Super Fireman Brothers game.
+
+    1. Download it from this page to your ~/.
+    2. cd ~/ && tar xzvf SuperFiremanBrothers-0.1.tar.gz
+    3. cd SuperFiremanBrothers
+    4. make
+    5. make documentation (optional)
+
+    Run the game with:
+
+    ./Bin/Release/SuperFiremanBrothers
+
+
+3) Usage
+
+You can watch our tutorial video in order to learn how to use it. You can also do "make documentation" so you can get a complete Doxygen 
+document.
+
+Link: http://www.youtube.com/watch?v=2nYJ4Aebopw
