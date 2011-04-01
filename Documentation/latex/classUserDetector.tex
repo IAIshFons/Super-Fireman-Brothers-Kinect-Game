@@ -1,0 +1,322 @@
+\hypertarget{classUserDetector}{
+\section{UserDetector Class Reference}
+\label{classUserDetector}\index{UserDetector@{UserDetector}}
+}
+
+
+This class handles the functions and methods of the user detection/handling for the application.  
+
+
+
+
+{\ttfamily \#include $<$UserDetector.h$>$}
+
+Inheritance diagram for UserDetector:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classUserDetector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserDetector_a1c71cbd2b85d7eda4d81021169aaaf57}{UserDetector} ()
+\item 
+\hyperlink{classUserDetector_afa46df6dc0cf46114755f04d3334e117}{UserDetector} (UserGenerator \&userGen, DepthGenerator \&depthGen)
+\item 
+\hyperlink{classUserDetector_ae17672b54f2a82d70ea5e22682cd0f0a}{$\sim$UserDetector} ()
+\item 
+void \hyperlink{classUserDetector_ac07661d3e60486c7ef25c2569a38d514}{registerCallbacks} ()
+\item 
+void \hyperlink{classUserDetector_ab7e1f7d8cbc37dcecd6b224fdd18f6c2}{addListener} (\hyperlink{classUserListener}{UserListener} $\ast$newListener)
+\item 
+void \hyperlink{classUserDetector_a34432616a52932934e8799f90aefc65a}{initCalibration} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a42845024a854fd79a714c00cfd5fd59b}{newUser} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a486ca42bbdc01ef853c82b36cda7cc84}{lostUser} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a2681776dca3ec63bfc77528504354512}{startCalibration} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a89a1b34569957c5cd4001c72561b554c}{endCalibration} (XnUserID userID, XnBool success)
+\item 
+void \hyperlink{classUserDetector_aa1aca77e875b9ab9b2b0b29d55672885}{poseDetected} (const XnChar $\ast$poseName, XnUserID userID)
+\item 
+XnChar $\ast$ \hyperlink{classUserDetector_a4119f90fe93f3803fe1daa083cc33a6b}{retPoseStr} ()
+\item 
+XnCallbackHandle \hyperlink{classUserDetector_aa031f0e31c840bb0cc0926dc57c9e634}{retUserHandle} ()
+\item 
+XnCallbackHandle \hyperlink{classUserDetector_aaf575a95cfe6d448c9869cabd873cf8d}{retUserPoseHandle} ()
+\item 
+XnCallbackHandle \hyperlink{classUserDetector_a556ec55f8cfc05990c369392a46a9951}{retUserSkelHandle} ()
+\item 
+UserGenerator \hyperlink{classUserDetector_a48f939c3a179902b64a7cd3306ce1945}{retUserGenerator} ()
+\item 
+DepthGenerator \hyperlink{classUserDetector_a5d8f0abf78b9b9b9d3b028f99ffe7c2b}{retDepthGenerator} ()
+\item 
+vector$<$ \hyperlink{classUserListener}{UserListener} $\ast$ $>$ \hyperlink{classUserDetector_ab36f575abf375bed3f947f584576635f}{retUserListenerVector} ()
+\item 
+int \hyperlink{classUserDetector_abea25041679657598dcb9db7d9b9a9ec}{retStage} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a12b1f74ff23077f84c4c4bf01260e91b}{changeStage} (XnUserID userID, int stage)
+\item 
+bool \hyperlink{classUserDetector_a0df3aaf4a4034358934cbc4f057b5c8f}{isTracked} (XnUserID userID)
+\item 
+void \hyperlink{classUserDetector_a896c7f8c005eb192fe0337688c167ca6}{remTrackedUser} (XnUserID userID)
+\item 
+int \hyperlink{classUserDetector_a5cdce696a8c4064b34e1f7159921789f}{retNumUsersTracked} ()
+\item 
+vector$<$ XnUserID $>$ \hyperlink{classUserDetector_af00e561a7bac57f09c2a8c29d69d912a}{trackedUsers} ()
+\item 
+bool \hyperlink{classUserDetector_ac7b298a32601799b1750e8d5d72067fa}{retDetectionStat} ()
+\item 
+void \hyperlink{classUserDetector_ae0547a63d4a2d94663dd41ab347ffb2b}{changeStopDetection} (bool value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the functions and methods of the user detection/handling for the application. In this class we implement the functions that are necessary for user handling and detection. This functions are those referents to callbacks for user actions (new user, lost users, calibration, pose detection), specifications about tracked users and current transformations status.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classUserListener}{UserListener} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUserDetector_a1c71cbd2b85d7eda4d81021169aaaf57}{
+\index{UserDetector@{UserDetector}!UserDetector@{UserDetector}}
+\index{UserDetector@{UserDetector}!UserDetector@{UserDetector}}
+\subsubsection[{UserDetector}]{\setlength{\rightskip}{0pt plus 5cm}UserDetector::UserDetector ()}}
+\label{classUserDetector_a1c71cbd2b85d7eda4d81021169aaaf57}
+Constructor of the class. \hypertarget{classUserDetector_afa46df6dc0cf46114755f04d3334e117}{
+\index{UserDetector@{UserDetector}!UserDetector@{UserDetector}}
+\index{UserDetector@{UserDetector}!UserDetector@{UserDetector}}
+\subsubsection[{UserDetector}]{\setlength{\rightskip}{0pt plus 5cm}UserDetector::UserDetector (UserGenerator \& {\em userGen}, \/  DepthGenerator \& {\em depthGen})}}
+\label{classUserDetector_afa46df6dc0cf46114755f04d3334e117}
+Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userGen}]reference to a OpenNI user generator class. \item[{\em depthGen}]reference to a OpenNI depth generator class. \end{DoxyParams}
+\hypertarget{classUserDetector_ae17672b54f2a82d70ea5e22682cd0f0a}{
+\index{UserDetector@{UserDetector}!$\sim$UserDetector@{$\sim$UserDetector}}
+\index{$\sim$UserDetector@{$\sim$UserDetector}!UserDetector@{UserDetector}}
+\subsubsection[{$\sim$UserDetector}]{\setlength{\rightskip}{0pt plus 5cm}UserDetector::$\sim$UserDetector ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classUserDetector_ae17672b54f2a82d70ea5e22682cd0f0a}
+Class destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classUserDetector_ab7e1f7d8cbc37dcecd6b224fdd18f6c2}{
+\index{UserDetector@{UserDetector}!addListener@{addListener}}
+\index{addListener@{addListener}!UserDetector@{UserDetector}}
+\subsubsection[{addListener}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::addListener ({\bf UserListener} $\ast$ {\em newListener})}}
+\label{classUserDetector_ab7e1f7d8cbc37dcecd6b224fdd18f6c2}
+Adds a new listener type, listener types are used to describe and implement behaviours of diferent user transformations, p.e, zamus and linq types are listener types. \hypertarget{classUserDetector_a12b1f74ff23077f84c4c4bf01260e91b}{
+\index{UserDetector@{UserDetector}!changeStage@{changeStage}}
+\index{changeStage@{changeStage}!UserDetector@{UserDetector}}
+\subsubsection[{changeStage}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::changeStage (XnUserID {\em userID}, \/  int {\em stage})}}
+\label{classUserDetector_a12b1f74ff23077f84c4c4bf01260e91b}
+Modifies the current transformation stage of the user. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID to modify the stage. \item[{\em stage}]new stage. \end{DoxyParams}
+\hypertarget{classUserDetector_ae0547a63d4a2d94663dd41ab347ffb2b}{
+\index{UserDetector@{UserDetector}!changeStopDetection@{changeStopDetection}}
+\index{changeStopDetection@{changeStopDetection}!UserDetector@{UserDetector}}
+\subsubsection[{changeStopDetection}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::changeStopDetection (bool {\em value})}}
+\label{classUserDetector_ae0547a63d4a2d94663dd41ab347ffb2b}
+Changes the stop detection parameter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]new value of the stop detection parameter. \end{DoxyParams}
+\hypertarget{classUserDetector_a89a1b34569957c5cd4001c72561b554c}{
+\index{UserDetector@{UserDetector}!endCalibration@{endCalibration}}
+\index{endCalibration@{endCalibration}!UserDetector@{UserDetector}}
+\subsubsection[{endCalibration}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::endCalibration (XnUserID {\em userID}, \/  XnBool {\em success})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserDetector_a89a1b34569957c5cd4001c72561b554c}
+Callback function called when calibration of the user ends. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user calibrated. \item[{\em success}]indicates if the calibration succeded or not. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classUserListener_a76796b86efc4cc8fc1fc250149092c1e}{UserListener}.
+
+\hypertarget{classUserDetector_a34432616a52932934e8799f90aefc65a}{
+\index{UserDetector@{UserDetector}!initCalibration@{initCalibration}}
+\index{initCalibration@{initCalibration}!UserDetector@{UserDetector}}
+\subsubsection[{initCalibration}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::initCalibration (XnUserID {\em userID})}}
+\label{classUserDetector_a34432616a52932934e8799f90aefc65a}
+Callback function called when the calibration of an user starts. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user to be calibrated. \end{DoxyParams}
+\hypertarget{classUserDetector_a0df3aaf4a4034358934cbc4f057b5c8f}{
+\index{UserDetector@{UserDetector}!isTracked@{isTracked}}
+\index{isTracked@{isTracked}!UserDetector@{UserDetector}}
+\subsubsection[{isTracked}]{\setlength{\rightskip}{0pt plus 5cm}bool UserDetector::isTracked (XnUserID {\em userID})}}
+\label{classUserDetector_a0df3aaf4a4034358934cbc4f057b5c8f}
+Indicates if an user is being tracked. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user to be checked. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is tracked, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a486ca42bbdc01ef853c82b36cda7cc84}{
+\index{UserDetector@{UserDetector}!lostUser@{lostUser}}
+\index{lostUser@{lostUser}!UserDetector@{UserDetector}}
+\subsubsection[{lostUser}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::lostUser (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserDetector_a486ca42bbdc01ef853c82b36cda7cc84}
+Callback function called when an user is lost. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user lost. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classUserListener_a399b56657670357e6545536732c38da2}{UserListener}.
+
+\hypertarget{classUserDetector_a42845024a854fd79a714c00cfd5fd59b}{
+\index{UserDetector@{UserDetector}!newUser@{newUser}}
+\index{newUser@{newUser}!UserDetector@{UserDetector}}
+\subsubsection[{newUser}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::newUser (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserDetector_a42845024a854fd79a714c00cfd5fd59b}
+Callback function called when new user appears. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the new user. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classUserListener_a4e7335d446ea94445305fb88b5612091}{UserListener}.
+
+\hypertarget{classUserDetector_aa1aca77e875b9ab9b2b0b29d55672885}{
+\index{UserDetector@{UserDetector}!poseDetected@{poseDetected}}
+\index{poseDetected@{poseDetected}!UserDetector@{UserDetector}}
+\subsubsection[{poseDetected}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::poseDetected (const XnChar $\ast$ {\em poseName}, \/  XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserDetector_aa1aca77e875b9ab9b2b0b29d55672885}
+Callback function called when a new pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em poseName}]name of the pose detected. \item[{\em userID}]user ID of the user that made the pose. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classUserListener_a52680abee2bb2da94e748b394a435edc}{UserListener}.
+
+\hypertarget{classUserDetector_ac07661d3e60486c7ef25c2569a38d514}{
+\index{UserDetector@{UserDetector}!registerCallbacks@{registerCallbacks}}
+\index{registerCallbacks@{registerCallbacks}!UserDetector@{UserDetector}}
+\subsubsection[{registerCallbacks}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::registerCallbacks ()}}
+\label{classUserDetector_ac07661d3e60486c7ef25c2569a38d514}
+Method that register the callbacks relative to user interaction with the Kinect (new user, calibrate user, etc). \hypertarget{classUserDetector_a896c7f8c005eb192fe0337688c167ca6}{
+\index{UserDetector@{UserDetector}!remTrackedUser@{remTrackedUser}}
+\index{remTrackedUser@{remTrackedUser}!UserDetector@{UserDetector}}
+\subsubsection[{remTrackedUser}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::remTrackedUser (XnUserID {\em userID})}}
+\label{classUserDetector_a896c7f8c005eb192fe0337688c167ca6}
+Remove a tracked user from tracked user map. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]userID of the user to be removed. \end{DoxyParams}
+\hypertarget{classUserDetector_a5d8f0abf78b9b9b9d3b028f99ffe7c2b}{
+\index{UserDetector@{UserDetector}!retDepthGenerator@{retDepthGenerator}}
+\index{retDepthGenerator@{retDepthGenerator}!UserDetector@{UserDetector}}
+\subsubsection[{retDepthGenerator}]{\setlength{\rightskip}{0pt plus 5cm}DepthGenerator UserDetector::retDepthGenerator ()}}
+\label{classUserDetector_a5d8f0abf78b9b9b9d3b028f99ffe7c2b}
+Returns depth generator. 
+\begin{DoxyParams}{Parameters}
+\item[{\em depth}]generator. \end{DoxyParams}
+\hypertarget{classUserDetector_ac7b298a32601799b1750e8d5d72067fa}{
+\index{UserDetector@{UserDetector}!retDetectionStat@{retDetectionStat}}
+\index{retDetectionStat@{retDetectionStat}!UserDetector@{UserDetector}}
+\subsubsection[{retDetectionStat}]{\setlength{\rightskip}{0pt plus 5cm}bool UserDetector::retDetectionStat ()}}
+\label{classUserDetector_ac7b298a32601799b1750e8d5d72067fa}
+Returns the detection status parameter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em detection}]status (detect, no detect). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+detection status. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a5cdce696a8c4064b34e1f7159921789f}{
+\index{UserDetector@{UserDetector}!retNumUsersTracked@{retNumUsersTracked}}
+\index{retNumUsersTracked@{retNumUsersTracked}!UserDetector@{UserDetector}}
+\subsubsection[{retNumUsersTracked}]{\setlength{\rightskip}{0pt plus 5cm}int UserDetector::retNumUsersTracked ()}}
+\label{classUserDetector_a5cdce696a8c4064b34e1f7159921789f}
+Returns the cantity of users that are being tracked. \begin{DoxyReturn}{Returns}
+cantity of users tracked. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a4119f90fe93f3803fe1daa083cc33a6b}{
+\index{UserDetector@{UserDetector}!retPoseStr@{retPoseStr}}
+\index{retPoseStr@{retPoseStr}!UserDetector@{UserDetector}}
+\subsubsection[{retPoseStr}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ UserDetector::retPoseStr ()}}
+\label{classUserDetector_a4119f90fe93f3803fe1daa083cc33a6b}
+Returns the name of the pose. \begin{DoxyReturn}{Returns}
+string name of the pose. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_abea25041679657598dcb9db7d9b9a9ec}{
+\index{UserDetector@{UserDetector}!retStage@{retStage}}
+\index{retStage@{retStage}!UserDetector@{UserDetector}}
+\subsubsection[{retStage}]{\setlength{\rightskip}{0pt plus 5cm}int UserDetector::retStage (XnUserID {\em userID})}}
+\label{classUserDetector_abea25041679657598dcb9db7d9b9a9ec}
+Returns the transformation stage of an user. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user current transformation stage. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a48f939c3a179902b64a7cd3306ce1945}{
+\index{UserDetector@{UserDetector}!retUserGenerator@{retUserGenerator}}
+\index{retUserGenerator@{retUserGenerator}!UserDetector@{UserDetector}}
+\subsubsection[{retUserGenerator}]{\setlength{\rightskip}{0pt plus 5cm}UserGenerator UserDetector::retUserGenerator ()}}
+\label{classUserDetector_a48f939c3a179902b64a7cd3306ce1945}
+Returns the user generator. \begin{DoxyReturn}{Returns}
+user generator. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_aa031f0e31c840bb0cc0926dc57c9e634}{
+\index{UserDetector@{UserDetector}!retUserHandle@{retUserHandle}}
+\index{retUserHandle@{retUserHandle}!UserDetector@{UserDetector}}
+\subsubsection[{retUserHandle}]{\setlength{\rightskip}{0pt plus 5cm}XnCallbackHandle UserDetector::retUserHandle ()}}
+\label{classUserDetector_aa031f0e31c840bb0cc0926dc57c9e634}
+Returns the user handler of callbacks. \begin{DoxyReturn}{Returns}
+user handle. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_ab36f575abf375bed3f947f584576635f}{
+\index{UserDetector@{UserDetector}!retUserListenerVector@{retUserListenerVector}}
+\index{retUserListenerVector@{retUserListenerVector}!UserDetector@{UserDetector}}
+\subsubsection[{retUserListenerVector}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf UserListener} $\ast$ $>$ UserDetector::retUserListenerVector ()}}
+\label{classUserDetector_ab36f575abf375bed3f947f584576635f}
+Returns the user listener vector. \begin{DoxyReturn}{Returns}
+user listener vector. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_aaf575a95cfe6d448c9869cabd873cf8d}{
+\index{UserDetector@{UserDetector}!retUserPoseHandle@{retUserPoseHandle}}
+\index{retUserPoseHandle@{retUserPoseHandle}!UserDetector@{UserDetector}}
+\subsubsection[{retUserPoseHandle}]{\setlength{\rightskip}{0pt plus 5cm}XnCallbackHandle UserDetector::retUserPoseHandle ()}}
+\label{classUserDetector_aaf575a95cfe6d448c9869cabd873cf8d}
+Returns the user pose handler of callbacks. \begin{DoxyReturn}{Returns}
+user pose handler. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a556ec55f8cfc05990c369392a46a9951}{
+\index{UserDetector@{UserDetector}!retUserSkelHandle@{retUserSkelHandle}}
+\index{retUserSkelHandle@{retUserSkelHandle}!UserDetector@{UserDetector}}
+\subsubsection[{retUserSkelHandle}]{\setlength{\rightskip}{0pt plus 5cm}XnCallbackHandle UserDetector::retUserSkelHandle ()}}
+\label{classUserDetector_a556ec55f8cfc05990c369392a46a9951}
+Returns the user skeleton handler of callbacks. \begin{DoxyReturn}{Returns}
+user skeleton handler. 
+\end{DoxyReturn}
+\hypertarget{classUserDetector_a2681776dca3ec63bfc77528504354512}{
+\index{UserDetector@{UserDetector}!startCalibration@{startCalibration}}
+\index{startCalibration@{startCalibration}!UserDetector@{UserDetector}}
+\subsubsection[{startCalibration}]{\setlength{\rightskip}{0pt plus 5cm}void UserDetector::startCalibration (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserDetector_a2681776dca3ec63bfc77528504354512}
+Callback function called when the calibration for a detected user begins. 
+\begin{DoxyParams}{Parameters}
+\item[{\em user}]ID of the user to be calibrated.\end{DoxyParams}
+Callback function called when thecalibration for a detected user begins. 
+\begin{DoxyParams}{Parameters}
+\item[{\em user}]ID of the user to be calibrated. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classUserListener_ae54282ac916fa8e2735b69a4d474c73a}{UserListener}.
+
+\hypertarget{classUserDetector_af00e561a7bac57f09c2a8c29d69d912a}{
+\index{UserDetector@{UserDetector}!trackedUsers@{trackedUsers}}
+\index{trackedUsers@{trackedUsers}!UserDetector@{UserDetector}}
+\subsubsection[{trackedUsers}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ XnUserID $>$ UserDetector::trackedUsers ()}}
+\label{classUserDetector_af00e561a7bac57f09c2a8c29d69d912a}
+Returns the tracked user vector. \begin{DoxyReturn}{Returns}
+vector of currently tracked users. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{UserDetector_8h}{UserDetector.h}\item 
+src/\hyperlink{UserDetector_8cpp}{UserDetector.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{classTimeCounter}{
+\section{TimeCounter Class Reference}
+\label{classTimeCounter}\index{TimeCounter@{TimeCounter}}
+}
+
+
+\hyperlink{classTimeCounter}{TimeCounter} class for timing in pose detection.  
+
+
+
+
+{\ttfamily \#include $<$TimeCounter.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTimeCounter_a2be677c8281f27c4dffd29c7f2ca6e7e}{TimeCounter} ()
+\item 
+\hyperlink{classTimeCounter_aa8790b82b41f08d9823700060f7a01dc}{$\sim$TimeCounter} ()
+\item 
+double \hyperlink{classTimeCounter_af579a764cbad73c606938f5c12b1776e}{takeTime} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classTimeCounter}{TimeCounter} class for timing in pose detection. This class is used to take the time difference between frames in order to calculate the amount of time a user is doing a determined pose.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAbstractPoseDetection}{AbstractPoseDetection} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTimeCounter_a2be677c8281f27c4dffd29c7f2ca6e7e}{
+\index{TimeCounter@{TimeCounter}!TimeCounter@{TimeCounter}}
+\index{TimeCounter@{TimeCounter}!TimeCounter@{TimeCounter}}
+\subsubsection[{TimeCounter}]{\setlength{\rightskip}{0pt plus 5cm}TimeCounter::TimeCounter ()}}
+\label{classTimeCounter_a2be677c8281f27c4dffd29c7f2ca6e7e}
+Class constructor.
+
+Class constructor \hypertarget{classTimeCounter_aa8790b82b41f08d9823700060f7a01dc}{
+\index{TimeCounter@{TimeCounter}!$\sim$TimeCounter@{$\sim$TimeCounter}}
+\index{$\sim$TimeCounter@{$\sim$TimeCounter}!TimeCounter@{TimeCounter}}
+\subsubsection[{$\sim$TimeCounter}]{\setlength{\rightskip}{0pt plus 5cm}TimeCounter::$\sim$TimeCounter ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classTimeCounter_aa8790b82b41f08d9823700060f7a01dc}
+Class Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTimeCounter_af579a764cbad73c606938f5c12b1776e}{
+\index{TimeCounter@{TimeCounter}!takeTime@{takeTime}}
+\index{takeTime@{takeTime}!TimeCounter@{TimeCounter}}
+\subsubsection[{takeTime}]{\setlength{\rightskip}{0pt plus 5cm}double TimeCounter::takeTime ()}}
+\label{classTimeCounter_af579a764cbad73c606938f5c12b1776e}
+Take the time and returns the difference between the current time and the last time taken. \begin{DoxyReturn}{Returns}
+difference between current time and las time. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{TimeCounter_8h}{TimeCounter.h}\item 
+src/\hyperlink{TimeCounter_8cpp}{TimeCounter.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classIceRodDetector}{
+\section{IceRodDetector Class Reference}
+\label{classIceRodDetector}\index{IceRodDetector@{IceRodDetector}}
+}
+
+
+This class handles the necessary functions for Ice Rod pose detection.  
+
+
+
+
+{\ttfamily \#include $<$IceRodDetector.h$>$}
+
+Inheritance diagram for IceRodDetector:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classIceRodDetector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceRodDetector_a1685f8a0502d55e9ab1c5b08c27c286d}{IceRodDetector} (\hyperlink{classLinq}{Linq} $\ast$linq, \hyperlink{classUserDetector}{UserDetector} $\ast$userD)
+\item 
+\hyperlink{classIceRodDetector_ab4f8fa8f698cc77b09d80605c50659a6}{$\sim$IceRodDetector} ()
+\item 
+virtual bool \hyperlink{classIceRodDetector_a81a33e1302a9f8336d6e8bf49c421e2a}{isPosing} (XnUserID userID, double poseTime=0.0)
+\item 
+virtual void \hyperlink{classIceRodDetector_aa2ef806316f44c93ea43f0b937c082fc}{poseDetected} (XnUserID userID)
+\item 
+void \hyperlink{classIceRodDetector_a91498b2cb7bcfa6dd0fe4dae60b50d40}{invokeIce} (XnUserID userID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the necessary functions for Ice Rod pose detection. In this class we implement the functions that are necessary for \hyperlink{classLinq}{Linq} Ice Rod pose. This functions are those referents to pose detection, pose application and specifications of the actions to take when the named pose is detected.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAbstractPoseDetection}{AbstractPoseDetection} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceRodDetector_a1685f8a0502d55e9ab1c5b08c27c286d}{
+\index{IceRodDetector@{IceRodDetector}!IceRodDetector@{IceRodDetector}}
+\index{IceRodDetector@{IceRodDetector}!IceRodDetector@{IceRodDetector}}
+\subsubsection[{IceRodDetector}]{\setlength{\rightskip}{0pt plus 5cm}IceRodDetector::IceRodDetector ({\bf Linq} $\ast$ {\em linq}, \/  {\bf UserDetector} $\ast$ {\em userD})}}
+\label{classIceRodDetector_a1685f8a0502d55e9ab1c5b08c27c286d}
+Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em linq}]pointer to a linq struture. \item[{\em userD}]pointer to a user detector structure.\end{DoxyParams}
+This application consist of a simple game that we called \char`\"{}Super Fireman Brothers\char`\"{}. This applications uses the XBox Kinect sensor to track the player's moves.
+
+Copyright (C) 2011 Alfonso Ros, Ismael Mendonca
+
+This file is part of Super Fireman Brothers.
+
+Super Fireman Brothers is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Super Fireman Brothers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Super Fireman Brothers. Check the txt file \char`\"{}LICENSE\char`\"{}, If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http://www.gnu.org/licenses/}$>$. Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em linq}]pointer to a linq struture. \item[{\em userD}]pointer to a user detector structure. \end{DoxyParams}
+\hypertarget{classIceRodDetector_ab4f8fa8f698cc77b09d80605c50659a6}{
+\index{IceRodDetector@{IceRodDetector}!$\sim$IceRodDetector@{$\sim$IceRodDetector}}
+\index{$\sim$IceRodDetector@{$\sim$IceRodDetector}!IceRodDetector@{IceRodDetector}}
+\subsubsection[{$\sim$IceRodDetector}]{\setlength{\rightskip}{0pt plus 5cm}IceRodDetector::$\sim$IceRodDetector ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classIceRodDetector_ab4f8fa8f698cc77b09d80605c50659a6}
+Class destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceRodDetector_a91498b2cb7bcfa6dd0fe4dae60b50d40}{
+\index{IceRodDetector@{IceRodDetector}!invokeIce@{invokeIce}}
+\index{invokeIce@{invokeIce}!IceRodDetector@{IceRodDetector}}
+\subsubsection[{invokeIce}]{\setlength{\rightskip}{0pt plus 5cm}void IceRodDetector::invokeIce (XnUserID {\em userID})}}
+\label{classIceRodDetector_a91498b2cb7bcfa6dd0fe4dae60b50d40}
+Method that is called when the Ice Rod pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user who is appliying the Ice Rod pose. \end{DoxyParams}
+\hypertarget{classIceRodDetector_a81a33e1302a9f8336d6e8bf49c421e2a}{
+\index{IceRodDetector@{IceRodDetector}!isPosing@{isPosing}}
+\index{isPosing@{isPosing}!IceRodDetector@{IceRodDetector}}
+\subsubsection[{isPosing}]{\setlength{\rightskip}{0pt plus 5cm}bool IceRodDetector::isPosing (XnUserID {\em userID}, \/  double {\em poseTime} = {\ttfamily 0.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classIceRodDetector_a81a33e1302a9f8336d6e8bf49c421e2a}
+Implementation of the isPosing function wich returns if the user is doing the Ice Rod pose. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user to pose. \item[{\em poseTime}]time of the user. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is posing for the Ice Rod, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractPoseDetection_ac3343980a1c6b822743b43c4274275e9}{AbstractPoseDetection}.
+
+\hypertarget{classIceRodDetector_aa2ef806316f44c93ea43f0b937c082fc}{
+\index{IceRodDetector@{IceRodDetector}!poseDetected@{poseDetected}}
+\index{poseDetected@{poseDetected}!IceRodDetector@{IceRodDetector}}
+\subsubsection[{poseDetected}]{\setlength{\rightskip}{0pt plus 5cm}void IceRodDetector::poseDetected (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classIceRodDetector_aa2ef806316f44c93ea43f0b937c082fc}
+Specifies the actions that should be taken when the Ice Rod pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user. \end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractPoseDetection_a7351e9ac500669934ff823aaf0767076}{AbstractPoseDetection}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{IceRodDetector_8h}{IceRodDetector.h}\item 
+src/IceRodDetector.cpp\end{DoxyCompactItemize}

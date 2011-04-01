@@ -1,0 +1,92 @@
+\hypertarget{common_8h}{
+\section{src/common.h File Reference}
+\label{common_8h}\index{src/common.h@{src/common.h}}
+}
+
+
+This is the header file for the common functions.  
+
+
+{\ttfamily \#include $<$XnOpenNI.h$>$}\par
+{\ttfamily \#include $<$XnOS.h$>$}\par
+{\ttfamily \#include $<$XnCppWrapper.h$>$}\par
+{\ttfamily \#include $<$GL/glut.h$>$}\par
+{\ttfamily \#include $<$GL/glu.h$>$}\par
+{\ttfamily \#include $<$GL/gl.h$>$}\par
+{\ttfamily \#include $<$cmath$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$ctime$>$}\par
+{\ttfamily \#include \char`\"{}TimeCounter.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Vector3D.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{common_8h_a1c7b6a95bd22a7a97ca68d5e7bc3aaff}{
+\#define {\bfseries STATUS\_\-CHECK}(f, msg)~checkGlobalErrorStatus(f, msg, \#f)}
+\label{common_8h_a1c7b6a95bd22a7a97ca68d5e7bc3aaff}
+
+\item 
+\hypertarget{common_8h_a974e3143bbea812b845acdb6f7e7d77c}{
+\#define {\bfseries XML\_\-CONFIG\_\-FILE}~\char`\"{}config/Config.xml\char`\"{}}
+\label{common_8h_a974e3143bbea812b845acdb6f7e7d77c}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{common_8h_a5b2d5abc38579c6ae0f69a17fc17713d}{checkGlobalErrorStatus} (XnStatus status, string errorMsg, const char $\ast$error)
+\item 
+void \hyperlink{common_8h_a6492cb203c7e06d2f3e1cd836f9886bf}{reportError} (string error)
+\item 
+void \hyperlink{common_8h_a35f000287b8423836d89faf1d4efaa81}{checkEnumError} (XnStatus status, EnumerationErrors \&error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the header file for the common functions. This application consist of a simple game that we called \char`\"{}Super Fireman Brothers\char`\"{}. This applications uses the XBox Kinect sensor to track the player's moves.
+
+Copyright (C) 2011 Alfonso Ros, Ismael Mendonca
+
+This file is part of Super Fireman Brothers.
+
+Super Fireman Brothers is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Super Fireman Brothers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Super Fireman Brothers. Check the txt file \char`\"{}LICENSE\char`\"{}, If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http://www.gnu.org/licenses/}$>$.
+
+This file contains all the common functions and methods needed to the entire program.
+
+\begin{DoxyAuthor}{Authors}
+Alfonso Ros e Ismael Mendonça 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{common_8h_a35f000287b8423836d89faf1d4efaa81}{
+\index{common.h@{common.h}!checkEnumError@{checkEnumError}}
+\index{checkEnumError@{checkEnumError}!common.h@{common.h}}
+\subsubsection[{checkEnumError}]{\setlength{\rightskip}{0pt plus 5cm}void checkEnumError (XnStatus {\em status}, \/  EnumerationErrors \& {\em error})}}
+\label{common_8h_a35f000287b8423836d89faf1d4efaa81}
+Function used to check the OpenNI registered enumeration errors. 
+\begin{DoxyParams}{Parameters}
+\item[{\em status}]actual XN status. \item[{\em error}]enumeration error struct containing the errors. \end{DoxyParams}
+\hypertarget{common_8h_a5b2d5abc38579c6ae0f69a17fc17713d}{
+\index{common.h@{common.h}!checkGlobalErrorStatus@{checkGlobalErrorStatus}}
+\index{checkGlobalErrorStatus@{checkGlobalErrorStatus}!common.h@{common.h}}
+\subsubsection[{checkGlobalErrorStatus}]{\setlength{\rightskip}{0pt plus 5cm}void checkGlobalErrorStatus (XnStatus {\em status}, \/  string {\em errorMsg}, \/  const char $\ast$ {\em error})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{common_8h_a5b2d5abc38579c6ae0f69a17fc17713d}
+Checks global status error messages of XN. 
+\begin{DoxyParams}{Parameters}
+\item[{\em status}]indicates the actual XN status. \item[{\em errorMsg}]string containing the error message to be shown. \item[{\em error}]code line of error message to be shown. \end{DoxyParams}
+\hypertarget{common_8h_a6492cb203c7e06d2f3e1cd836f9886bf}{
+\index{common.h@{common.h}!reportError@{reportError}}
+\index{reportError@{reportError}!common.h@{common.h}}
+\subsubsection[{reportError}]{\setlength{\rightskip}{0pt plus 5cm}void reportError (string {\em error})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{common_8h_a6492cb203c7e06d2f3e1cd836f9886bf}
+Report and errpr and exit the program. 
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]containing the error message. \end{DoxyParams}

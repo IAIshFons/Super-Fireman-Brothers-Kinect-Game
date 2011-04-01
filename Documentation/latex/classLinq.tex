@@ -1,0 +1,215 @@
+\hypertarget{classLinq}{
+\section{Linq Class Reference}
+\label{classLinq}\index{Linq@{Linq}}
+}
+
+
+This class hanldes all aspects about the detection and information referred to the \hyperlink{classLinq}{Linq} players.  
+
+
+
+
+{\ttfamily \#include $<$Linq.h$>$}
+
+Inheritance diagram for Linq:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classLinq}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classLinq_a63d00f6589f33af65604d363574fbe51}{lStages} \{ {\bfseries T\_\-STAGE\_\-1} =  4, 
+{\bfseries T\_\-STAGE\_\-2}, 
+{\bfseries TRANSFORMED}
+ \}
+\item 
+enum \hyperlink{classLinq_a40047098b8a09b8eb59b005a07c9671b}{IceRodStates} \{ {\bfseries DEACTIVATED}, 
+{\bfseries ACTIVATED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinq_abd5cf38c179739fd6bbc1b30cfc319fc}{Linq} (\hyperlink{classUserDetector}{UserDetector} $\ast$\hyperlink{classAbstractPoseDetection_a20dccd0d1494d1ef0ec896e996b5e70b}{userDetector})
+\item 
+\hyperlink{classLinq_ab33fc2c4487bf5f64ffb34630c147e9a}{$\sim$Linq} ()
+\item 
+void \hyperlink{classLinq_a0a47d35b795ff8ee0e43bcec1528c448}{addIceSpawn} (XnPoint3D position, \hyperlink{classVector3D}{Vector3D} direction, XnUserID p)
+\item 
+int \hyperlink{classLinq_a55ee00fafc766eecaac949772197892a}{retIceRodStatus} (XnUserID userID)
+\item 
+void \hyperlink{classLinq_a5104de663be5b3dc0a4d78ad28afb5c3}{changeIceRodStatus} (XnUserID userID, int status)
+\item 
+bool \hyperlink{classLinq_a8bf61b41e6722b72da7e691e8e91f07b}{retIceCharge} (XnUserID userID)
+\item 
+void \hyperlink{classLinq_a035c5e48d36a6601d9234ac24c40e2c7}{changeIceRodCharge} (XnUserID userID, bool status)
+\item 
+virtual int \hyperlink{classLinq_a6994af326a734f473eae3983b32a5148}{retLisUserStage} (XnUserID userID)
+\item 
+virtual bool \hyperlink{classLinq_a55070b91120aa07225d64f8bd3136c11}{isListened} (XnUserID userID)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classLinqSpawnIce}{LinqSpawnIce} $>$ \hyperlink{classLinq_ac3cb5607d252c5462bfac2a5011bc41a}{iceSpawn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class hanldes all aspects about the detection and information referred to the \hyperlink{classLinq}{Linq} players. This class handles the detection of the pose to transform in \hyperlink{classLinq}{Linq} and other things like the pose to spawn ice and the ice spawned by the users. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classLinq_a40047098b8a09b8eb59b005a07c9671b}{
+\index{Linq@{Linq}!IceRodStates@{IceRodStates}}
+\index{IceRodStates@{IceRodStates}!Linq@{Linq}}
+\subsubsection[{IceRodStates}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Linq::IceRodStates}}}
+\label{classLinq_a40047098b8a09b8eb59b005a07c9671b}
+Ice rod stages.
+
+
+\begin{DoxyItemize}
+\item DEACTIVATED the user can't shoot.
+\item ACTIVATED the user can shoot. 
+\end{DoxyItemize}\hypertarget{classLinq_a63d00f6589f33af65604d363574fbe51}{
+\index{Linq@{Linq}!lStages@{lStages}}
+\index{lStages@{lStages}!Linq@{Linq}}
+\subsubsection[{lStages}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Linq::lStages}}}
+\label{classLinq_a63d00f6589f33af65604d363574fbe51}
+Specifies transformation stages.
+
+
+\begin{DoxyItemize}
+\item T\_\-STAGE\_\-1 the right arm of the user is transformed.
+\item T\_\-STAGE\_\-2 the right and left arm of the user is transformed.
+\item TRANSFORMED the user is transformed completly. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classLinq_abd5cf38c179739fd6bbc1b30cfc319fc}{
+\index{Linq@{Linq}!Linq@{Linq}}
+\index{Linq@{Linq}!Linq@{Linq}}
+\subsubsection[{Linq}]{\setlength{\rightskip}{0pt plus 5cm}Linq::Linq ({\bf UserDetector} $\ast$ {\em userDetector})}}
+\label{classLinq_abd5cf38c179739fd6bbc1b30cfc319fc}
+\hyperlink{classLinq}{Linq} constructor.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userDetector}]is a pointer to the userDetector of the game. \end{DoxyParams}
+\hypertarget{classLinq_ab33fc2c4487bf5f64ffb34630c147e9a}{
+\index{Linq@{Linq}!$\sim$Linq@{$\sim$Linq}}
+\index{$\sim$Linq@{$\sim$Linq}!Linq@{Linq}}
+\subsubsection[{$\sim$Linq}]{\setlength{\rightskip}{0pt plus 5cm}Linq::$\sim$Linq ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classLinq_ab33fc2c4487bf5f64ffb34630c147e9a}
+\hyperlink{classLinq}{Linq} destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classLinq_a0a47d35b795ff8ee0e43bcec1528c448}{
+\index{Linq@{Linq}!addIceSpawn@{addIceSpawn}}
+\index{addIceSpawn@{addIceSpawn}!Linq@{Linq}}
+\subsubsection[{addIceSpawn}]{\setlength{\rightskip}{0pt plus 5cm}void Linq::addIceSpawn (XnPoint3D {\em position}, \/  {\bf Vector3D} {\em direction}, \/  XnUserID {\em p})}}
+\label{classLinq_a0a47d35b795ff8ee0e43bcec1528c448}
+Add shoot function.
+
+This function adds a new ice to the vector iceSpawn.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em position}]is the initial position of the ice \item[{\em direction}]is the vector that represents the direction of the ice.  p is the player's id. \end{DoxyParams}
+\hypertarget{classLinq_a035c5e48d36a6601d9234ac24c40e2c7}{
+\index{Linq@{Linq}!changeIceRodCharge@{changeIceRodCharge}}
+\index{changeIceRodCharge@{changeIceRodCharge}!Linq@{Linq}}
+\subsubsection[{changeIceRodCharge}]{\setlength{\rightskip}{0pt plus 5cm}void Linq::changeIceRodCharge (XnUserID {\em userID}, \/  bool {\em status})}}
+\label{classLinq_a035c5e48d36a6601d9234ac24c40e2c7}
+Changes ice rod charge Status.
+
+This is needed to sequence the poses to spawn ice.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id. \item[{\em satus}]is the value to set the charge map. \end{DoxyParams}
+\hypertarget{classLinq_a5104de663be5b3dc0a4d78ad28afb5c3}{
+\index{Linq@{Linq}!changeIceRodStatus@{changeIceRodStatus}}
+\index{changeIceRodStatus@{changeIceRodStatus}!Linq@{Linq}}
+\subsubsection[{changeIceRodStatus}]{\setlength{\rightskip}{0pt plus 5cm}void Linq::changeIceRodStatus (XnUserID {\em userID}, \/  int {\em status})}}
+\label{classLinq_a5104de663be5b3dc0a4d78ad28afb5c3}
+Changes buster Status.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id. \item[{\em status}]status to set the ice rod. \end{DoxyParams}
+\hypertarget{classLinq_a55070b91120aa07225d64f8bd3136c11}{
+\index{Linq@{Linq}!isListened@{isListened}}
+\index{isListened@{isListened}!Linq@{Linq}}
+\subsubsection[{isListened}]{\setlength{\rightskip}{0pt plus 5cm}bool Linq::isListened (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classLinq_a55070b91120aa07225d64f8bd3136c11}
+Returns if the user is currently listened.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's ID.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user is tracked. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUserListener_aea80d4da192afaf0329cf92e4489fd0a}{UserListener}.
+
+\hypertarget{classLinq_a8bf61b41e6722b72da7e691e8e91f07b}{
+\index{Linq@{Linq}!retIceCharge@{retIceCharge}}
+\index{retIceCharge@{retIceCharge}!Linq@{Linq}}
+\subsubsection[{retIceCharge}]{\setlength{\rightskip}{0pt plus 5cm}bool Linq::retIceCharge (XnUserID {\em userID})}}
+\label{classLinq_a8bf61b41e6722b72da7e691e8e91f07b}
+Returns ice rod charge status.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the player can shoot. False in other case. 
+\end{DoxyReturn}
+\hypertarget{classLinq_a55ee00fafc766eecaac949772197892a}{
+\index{Linq@{Linq}!retIceRodStatus@{retIceRodStatus}}
+\index{retIceRodStatus@{retIceRodStatus}!Linq@{Linq}}
+\subsubsection[{retIceRodStatus}]{\setlength{\rightskip}{0pt plus 5cm}int Linq::retIceRodStatus (XnUserID {\em userID})}}
+\label{classLinq_a55ee00fafc766eecaac949772197892a}
+Returns buster status.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer that represents the status of the ice rod. 
+\end{DoxyReturn}
+\hypertarget{classLinq_a6994af326a734f473eae3983b32a5148}{
+\index{Linq@{Linq}!retLisUserStage@{retLisUserStage}}
+\index{retLisUserStage@{retLisUserStage}!Linq@{Linq}}
+\subsubsection[{retLisUserStage}]{\setlength{\rightskip}{0pt plus 5cm}int Linq::retLisUserStage (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classLinq_a6994af326a734f473eae3983b32a5148}
+Return listener user stage
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stage of the user given by the \hyperlink{classUserListener}{UserListener}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUserListener_ad28b54b309b207f197ed238263d1014e}{UserListener}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classLinq_ac3cb5607d252c5462bfac2a5011bc41a}{
+\index{Linq@{Linq}!iceSpawn@{iceSpawn}}
+\index{iceSpawn@{iceSpawn}!Linq@{Linq}}
+\subsubsection[{iceSpawn}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf LinqSpawnIce}$>$ {\bf Linq::iceSpawn}}}
+\label{classLinq_ac3cb5607d252c5462bfac2a5011bc41a}
+Vector of linq ice spawns 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Linq_8h}{Linq.h}\item 
+src/Linq.cpp\end{DoxyCompactItemize}

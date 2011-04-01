@@ -1,0 +1,132 @@
+\hypertarget{classFlame}{
+\section{Flame Class Reference}
+\label{classFlame}\index{Flame@{Flame}}
+}
+
+
+This class contains the information about one flame in the game.  
+
+
+
+
+{\ttfamily \#include $<$Flame.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlame_a57b7b3fa89daf6286b205747f0d48489}{Flame} ()
+\item 
+\hyperlink{classFlame_a05d9240d488266a52af6728bf9b9ea56}{Flame} (\hyperlink{classVector3D}{Vector3D} pos, int lifePoint, GLMmodel $\ast$model)
+\item 
+\hyperlink{classFlame_ab74ae1bf0b8a3f8315af7cc963149608}{$\sim$Flame} ()
+\item 
+bool \hyperlink{classFlame_a65be7ac4fe325708cc247d53648e30e9}{isInBoundingBox} (\hyperlink{classVector3D}{Vector3D} shoot)
+\item 
+bool \hyperlink{classFlame_ab640c722a62376f6f4c323e6dbb704ae}{isAlive} ()
+\item 
+int \hyperlink{classFlame_a680de652b1c92eb697a8c0c21720dadd}{extinguish} ()
+\item 
+void \hyperlink{classFlame_ac44ae7ca021b2b49089f87a3625152fa}{advance} (float distance)
+\item 
+void \hyperlink{classFlame_a71b21d01230de74c83b5357f7a2955f3}{drawFlame} ()
+\item 
+void \hyperlink{classFlame_a9918c5c5e904393c830fc8672e37bc77}{drawShadow} (float floorLevel)
+\item 
+float \hyperlink{classFlame_ae3bafab240d4ea382dc22a971f8b78b2}{getZPos} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the information about one flame in the game. Tha flames have helth points (hp) that gets reduced when the flames are hit by a shoot of a player. The flames are hit when the position of a shoot is into the bounding box of the flame.
+
+Aditionaly the flames only move in the Z axis. When they go to far, the game ends. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFlame_a57b7b3fa89daf6286b205747f0d48489}{
+\index{Flame@{Flame}!Flame@{Flame}}
+\index{Flame@{Flame}!Flame@{Flame}}
+\subsubsection[{Flame}]{\setlength{\rightskip}{0pt plus 5cm}Flame::Flame ()}}
+\label{classFlame_a57b7b3fa89daf6286b205747f0d48489}
+Constructor \hypertarget{classFlame_a05d9240d488266a52af6728bf9b9ea56}{
+\index{Flame@{Flame}!Flame@{Flame}}
+\index{Flame@{Flame}!Flame@{Flame}}
+\subsubsection[{Flame}]{\setlength{\rightskip}{0pt plus 5cm}Flame::Flame ({\bf Vector3D} {\em pos}, \/  int {\em lifePoint}, \/  GLMmodel $\ast$ {\em model})}}
+\label{classFlame_a05d9240d488266a52af6728bf9b9ea56}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pos}]is the position of the \hyperlink{classFlame}{Flame}. \item[{\em lifePoint}]is how much hp will have the \hyperlink{classFlame}{Flame}. \item[{\em model}]is the pointer to the flame model loaded by GLM. \end{DoxyParams}
+\hypertarget{classFlame_ab74ae1bf0b8a3f8315af7cc963149608}{
+\index{Flame@{Flame}!$\sim$Flame@{$\sim$Flame}}
+\index{$\sim$Flame@{$\sim$Flame}!Flame@{Flame}}
+\subsubsection[{$\sim$Flame}]{\setlength{\rightskip}{0pt plus 5cm}Flame::$\sim$Flame ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classFlame_ab74ae1bf0b8a3f8315af7cc963149608}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classFlame_ac44ae7ca021b2b49089f87a3625152fa}{
+\index{Flame@{Flame}!advance@{advance}}
+\index{advance@{advance}!Flame@{Flame}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void Flame::advance (float {\em distance})}}
+\label{classFlame_ac44ae7ca021b2b49089f87a3625152fa}
+Advance the flame.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em distance}]is the amount of distance that the flame will advance. \end{DoxyParams}
+\hypertarget{classFlame_a71b21d01230de74c83b5357f7a2955f3}{
+\index{Flame@{Flame}!drawFlame@{drawFlame}}
+\index{drawFlame@{drawFlame}!Flame@{Flame}}
+\subsubsection[{drawFlame}]{\setlength{\rightskip}{0pt plus 5cm}void Flame::drawFlame ()}}
+\label{classFlame_a71b21d01230de74c83b5357f7a2955f3}
+Draw the flame in OpenGL. \hypertarget{classFlame_a9918c5c5e904393c830fc8672e37bc77}{
+\index{Flame@{Flame}!drawShadow@{drawShadow}}
+\index{drawShadow@{drawShadow}!Flame@{Flame}}
+\subsubsection[{drawShadow}]{\setlength{\rightskip}{0pt plus 5cm}void Flame::drawShadow (float {\em floorLevel})}}
+\label{classFlame_a9918c5c5e904393c830fc8672e37bc77}
+Draw Shadow. Draws a shadown at the floor level. This is helfull to the users to get a better perspective on where is the actually the flame.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em floorLevel}]is a value in the Y axis where the shadows will be drawn \end{DoxyParams}
+\hypertarget{classFlame_a680de652b1c92eb697a8c0c21720dadd}{
+\index{Flame@{Flame}!extinguish@{extinguish}}
+\index{extinguish@{extinguish}!Flame@{Flame}}
+\subsubsection[{extinguish}]{\setlength{\rightskip}{0pt plus 5cm}int Flame::extinguish ()}}
+\label{classFlame_a680de652b1c92eb697a8c0c21720dadd}
+Down the hp of the flame. \hypertarget{classFlame_ae3bafab240d4ea382dc22a971f8b78b2}{
+\index{Flame@{Flame}!getZPos@{getZPos}}
+\index{getZPos@{getZPos}!Flame@{Flame}}
+\subsubsection[{getZPos}]{\setlength{\rightskip}{0pt plus 5cm}float Flame::getZPos ()}}
+\label{classFlame_ae3bafab240d4ea382dc22a971f8b78b2}
+Get z position of the flame. \hypertarget{classFlame_ab640c722a62376f6f4c323e6dbb704ae}{
+\index{Flame@{Flame}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Flame@{Flame}}
+\subsubsection[{isAlive}]{\setlength{\rightskip}{0pt plus 5cm}bool Flame::isAlive ()}}
+\label{classFlame_ab640c722a62376f6f4c323e6dbb704ae}
+Return true if the flame is steel alive. \hypertarget{classFlame_a65be7ac4fe325708cc247d53648e30e9}{
+\index{Flame@{Flame}!isInBoundingBox@{isInBoundingBox}}
+\index{isInBoundingBox@{isInBoundingBox}!Flame@{Flame}}
+\subsubsection[{isInBoundingBox}]{\setlength{\rightskip}{0pt plus 5cm}bool Flame::isInBoundingBox ({\bf Vector3D} {\em shoot})}}
+\label{classFlame_a65be7ac4fe325708cc247d53648e30e9}
+Returns if a shot is inside of flame bounding box.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em shoot}]is the position of the shoot to test if it hit the flame.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point shoot is in the bounding box of the flame. 
+\end{DoxyReturn}
+
+
+TODO: The GLM library have a function that is call glmDimensions. This function can calculate the dimentions of the model and can be used to calculate the bounding box. But, when we used it, we dont get a good result, so we decided to get aproximated values.
+
+In future releases we should use this method to get a more exact result.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Flame_8h}{Flame.h}\item 
+src/\hyperlink{Flame_8cpp}{Flame.cpp}\end{DoxyCompactItemize}

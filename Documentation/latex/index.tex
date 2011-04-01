@@ -1,0 +1,226 @@
+\begin{DoxyAuthor}{Authors}
+
+\begin{DoxyItemize}
+\item Alfonso Ros (\href{mailto:alfonso@gia.usb.ve}{\tt alfonso@gia.usb.ve})
+\item Ismael Mendonça (\href{mailto:ismael@gia.usb.ve}{\tt ismael@gia.usb.ve})
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\hypertarget{index_intro}{}\section{Introduction}\label{index_intro}
+This application consist of a simple game that we called \char`\"{}Super Fireman
+ Brothers\char`\"{}. This applications uses the XBox Kinect sensor to track the player's moves.
+
+The program is in C++ language. We have used the \href{http://www.openni.org/}{\tt OpenNI} framework and the PrimeSense \href{http://www.primesense.com/?p=515}{\tt NITE} middleware with the \href{https://github.com/avin2/SensorKinect}{\tt avin2}. For install instrucction see the next section.
+
+Also note the existence of the following directories:
+\begin{DoxyItemize}
+\item {\bfseries models}
+\begin{DoxyItemize}
+\item Contains the obj models of \hyperlink{classZamus}{Zamus} and \hyperlink{classLinq}{Linq}. This files are loaded by the GLM library.
+\end{DoxyItemize}
+\item {\bfseries config}
+\begin{DoxyItemize}
+\item Contains the doxygen and the OpenNI context xml file.
+\end{DoxyItemize}
+\item {\bfseries src}
+\begin{DoxyItemize}
+\item Source files.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+ \hypertarget{index_installation}{}\section{How to install}\label{index_installation}
+First of all, you must be sure to have this packages:
+
+
+\begin{DoxyItemize}
+\item GCC 4.x
+\item Python 2.6+/3.x
+\item LibUSB 1.0.8
+\item OpenGL/GLUT
+\end{DoxyItemize}
+
+To install this packages in Ubuntu just run the following for the missing packages.
+
+
+\begin{DoxyItemize}
+\item sudo apt-\/get install g++ python libusb-\/1.0-\/0-\/dev freeglut3-\/dev libjpeg-\/dev libpng-\/dev libglu1-\/mesa-\/dev mesa-\/common-\/dev
+\end{DoxyItemize}
+
+Next you need to install the OpenNI. We used the unstable version. Here are the steps to install it. We use the git command so if you don't have it installed you cand run.
+
+
+\begin{DoxyEnumerate}
+\item aptitude install git-\/core
+\end{DoxyEnumerate}
+
+Ok here are the steps to install OpenNI:
+
+
+\begin{DoxyEnumerate}
+\item mkdir $\sim$/Kinect \&\& cd $\sim$/Kinect
+\item git clone \href{https://github.com/OpenNI/OpenNI.git}{\tt https://github.com/OpenNI/OpenNI.git}
+\item cd OpenNI/Platform/Linux-\/x86/CreateRedist \&\& ./RedistMaker
+\item cd ../Redist \&\& sudo ./install.sh
+\end{DoxyEnumerate}
+
+That's all. Now we have OpenNI installed. Now we can install the avin2 diver.
+
+
+\begin{DoxyEnumerate}
+\item cd $\sim$/Kinect
+\item git clone \href{https://github.com/avin2/SensorKinect.git}{\tt https://github.com/avin2/SensorKinect.git}
+\item cd SensorKinect/Platform/Linux-\/x86/CreateRedist \&\& ./RedistMaker
+\item cd ../Redist \&\& sudo ./install.sh
+\end{DoxyEnumerate}
+
+Now we need to install the NITE middleware. We used Nite 1.3.0.18 (Unstable).
+
+
+\begin{DoxyEnumerate}
+\item go to this page and \href{http://www.openni.org/downloadfiles/openni-compliant-middleware-binaries/33-latest-unstable}{\tt download the latest NITE}.
+\item Save the NITE tarball to $\sim$/Kinect.
+\item tar -\/jxvf NITE-\/Bin-\/Linux32-\/v1.3.0.18.tar.bz2
+\item cd $\sim$/kinect/NITE/Nite-\/1.3.0.18/Data
+\item Edit all xml files and replace the license with this one \char`\"{}0KOIk2JeIBYClPWVnMoRKn5cdY4=\char`\"{}
+\item Also replace the MapOutputMode line to look like this \char`\"{}$<$
+  MapOutputMode xRes=\char`\"{}640\char`\"{} yRes=\char`\"{}480\char`\"{} FPS=\char`\"{}30\char`\"{}/$>$\char`\"{}
+\item niLicense PrimeSense 0KOIk2JeIBYClPWVnMoRKn5cdY4=
+\item cd $\sim$/kinect/NITE/Nite-\/1.3.0.18/
+\item sudo ./install.sh
+\item make \&\& sudo make install
+\end{DoxyEnumerate}
+
+All ready. Now we have the OpenNI, avin2 and NITE software installed. We only need to install GLM library to start playing.
+
+
+\begin{DoxyEnumerate}
+\item mkdir $\sim$/glm
+\item Download the GLM library from this \href{http://devernay.free.fr/hacks/glm/}{\tt page} and save it to $\sim$/glm.
+\item cd $\sim$/glm \&\& tar -\/zxvf glm-\/0.3.1.tar.gz
+\item cd glm-\/0.3.1/
+\item ./configure \&\& make \&\& sudo makeinstall
+\end{DoxyEnumerate}
+
+Finally Super Fireman Brothers game.
+
+
+\begin{DoxyEnumerate}
+\item Download it from this page to your $\sim$/.
+\item cd $\sim$/ \&\& tar xzvf SuperFiremanBrothers-\/0.1.tar.gz
+\item cd \hyperlink{classSuperFiremanBrothers}{SuperFiremanBrothers}
+\item make
+\item make documentation (optional)
+\end{DoxyEnumerate}
+
+Run the game with:
+
+
+\begin{DoxyItemize}
+\item ./Bin/Release/SuperFiremanBrothers
+\end{DoxyItemize}
+
+
+
+\hypertarget{index_playmode}{}\section{How to play}\label{index_playmode}
+The game is very simple to play. First you need to specify how many players will be on the game. This is done through the console. We have set a maximun of 3 players, because if there are too many players, the tracking gets difficult.
+
+Once the number of players is set, it promps a window where the game will be displayed. Make sure that the Kinect is looking some open area, otherwise you may experiment some troubles with the floor tracking.
+
+Step in front of the Kinect between 1.5 and 3 mts. You'll see a litle colored diamond appear in the window, this diamond represent your position.
+
+
+
+Now you must make the calibration pose in order to get your skeleton tracked by the Kinect. Try to stay near the middle of the screen for faster/easier calibration. You must maintain this pose for a period of time until a stick figure appears in exchange of your diamond. This stick figure represents that the tracking of your body is been done.
+
+Now is time to select one of two available characters of the game. One is an intergalactic fireman called \hyperlink{classZamus}{Zamus} and the other one is a mystic ice magician called \hyperlink{classLinq}{Linq} that can invoke the mighty power of freezed water from other dimentions.
+
+To transform in \hyperlink{classZamus}{Zamus}, you must do the \hyperlink{classZamus}{Zamus} transformation pose once you are tracked as a stick figure.
+
+ 
+
+When you are transformed in \hyperlink{classZamus}{Zamus}, you can activate your water cannon with the activation pose and deactivate it with the deactivation pose as show below.
+
+ 
+
+Then you can fire if you maintain your arm straight.
+
+
+
+To transform in \hyperlink{classLinq}{Linq} you must make 3 poses sequentially.
+
+  
+
+To invoke the mighty power of ice you must bend your arm like the first figure, then you must put your arm straight like the second figure. Repeat this to invoke more ice.
+
+ 
+
+Now you are ready to play. When all the player are calibrated and transformed, the game will begin. The fireballs will start to spawn and advance to your position. You must extinguish them or you are going to lose. Every level you pass will turn harder and harder. For every flame you extinguish you get more score. The objetive of the game is to get the higher score.
+
+
+
+ \hypertarget{index_notes}{}\section{release.notes}\label{index_notes}
+release.notes Super Fireman Brothers v0.1, in order to run the application:
+\begin{DoxyItemize}
+\item Run make
+\item Run make documentation (if you want the documentation)
+\item Run the command ./SuperFiremanBrothers.
+\end{DoxyItemize}
+
+
+
+ \hypertarget{index_requirements}{}\section{requirements}\label{index_requirements}
+We implement all the application in \href{http://www.ubuntu.com/}{\tt Ubuntu 10.10}.
+
+To run the application first you will have to some dependencies are needed, download the following libraries, you could use \char`\"{}aptitude install\char`\"{} in Linux:
+
+
+\begin{DoxyItemize}
+\item GCC 4.x -\/-\/ sudo apt-\/get install g++
+\item Python 2.6+/3.x -\/-\/ sudo apt-\/get install python
+\item LibUSB 1.0.8 -\/-\/ sudo apt-\/get install libusb-\/1.0-\/0-\/dev
+\item OpenGL/GLUT -\/-\/ sudo apt-\/get install libglu1-\/mesa-\/dev freeglut3-\/dev mesa-\/common-\/dev
+\item Glm -\/-\/ \href{http://devernay.free.fr/hacks/glm/}{\tt http://devernay.free.fr/hacks/glm/}
+\end{DoxyItemize}
+
+Optional Requirements (To build the documentation):
+
+
+\begin{DoxyItemize}
+\item Doxygen -\/-\/ sudo apt-\/get install doxygen
+\item GraphViz -\/-\/ sudo apt-\/get install graphviz
+\end{DoxyItemize}
+
+Now you will have to install the OpenNI, SensorKinect and Nite drivers to get the application work:
+
+
+\begin{DoxyItemize}
+\item Unstable version of OpenNI-\/4c9ff97: \href{https://github.com/OpenNI/OpenNI/tree/unstable}{\tt https://github.com/OpenNI/OpenNI/tree/unstable} or download directly from \href{http://www.openni.org/downloadfiles/openni-binaries/20-latest-unstable.}{\tt http://www.openni.org/downloadfiles/openni-\/binaries/20-\/latest-\/unstable.}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Sensor Kinect avin2 driver (Unstable): \href{https://github.com/avin2/SensorKinect.}{\tt https://github.com/avin2/SensorKinect.}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Nite 1.3.0.18 (Unstable): \href{http://www.openni.org/downloadfiles/openni-compliant-middleware-binaries/33-latest-unstable}{\tt http://www.openni.org/downloadfiles/openni-\/compliant-\/middleware-\/binaries/33-\/latest-\/unstable} and you will have to introduce the next license key: 0KOIk2JeIBYClPWVnMoRKn5cdY4=
+\end{DoxyItemize}
+
+This application was tested given successfull results in the following hardware:
+
+
+\begin{DoxyItemize}
+\item Hp pavilion dv2927la Notebook, Intel Core 2 Duo, RAM 3GB, Intel Corporation Mobile GM965/GL960 Integrated Graphics Controller.
+\item Hp pavilion dv6000 Notebook, Intel Core 2 Duo, RAM 3GB, Intel Corporation Mobile GM965/GL960 Integrated Graphics Controller.
+\end{DoxyItemize}
+
+
+
+ \begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]There is some problems with the floor drawing related to the Kinect position, the floor drawing is done by detecting the floor area with the OpenNI functions and draw the pixels of the detected floor. If you place the Kinect in an area that you cannot see the floor it will be drawn in a wrong way so the application will not run effectively, the problems are experienced if the area you place the Kinect is really small or some objects obstruct the floor. Another way to draw the floor could be a good solution. 
+
+There is a system of listeners wich consists in classes that describe the different type of characters you can use, the abstract listener type could be improved in a way that the new user callback could be used directly to listen for \hyperlink{classZamus}{Zamus} or \hyperlink{classLinq}{Linq} types. 
+
+Implement a way to win the game of Super Fireman Brothers, actually the game is intended for competing between players, the one with highest score is the winner. \end{Desc}

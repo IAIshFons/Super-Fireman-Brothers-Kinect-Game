@@ -1,0 +1,95 @@
+\hypertarget{classNeutralModel}{
+\section{NeutralModel Class Reference}
+\label{classNeutralModel}\index{NeutralModel@{NeutralModel}}
+}
+
+
+This class handles the drawing of the users when they are not transfomated in some character.  
+
+
+
+
+{\ttfamily \#include $<$NeutralModel.h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classNeutralModel_ae6dcf993ce557c9d12b4f647a9315402}{joints} \{ \par
+{\bfseries HEAD} =  0, 
+{\bfseries NECK}, 
+{\bfseries RSHOULDER}, 
+{\bfseries RELBOW}, 
+\par
+{\bfseries RHAND}, 
+{\bfseries LSHOULDER}, 
+{\bfseries LELBOW}, 
+{\bfseries LHAND}, 
+\par
+{\bfseries TORSO}, 
+{\bfseries RHIP}, 
+{\bfseries RKNEE}, 
+{\bfseries RFOOT}, 
+\par
+{\bfseries LHIP}, 
+{\bfseries LKNEE}, 
+{\bfseries LFOOT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeutralModel_acc468e49cc6ccad440a869d3e3dfbef9}{NeutralModel} ()
+\item 
+\hyperlink{classNeutralModel_a4de591c21128f7fe002aae39d38e2aaf}{NeutralModel} (\hyperlink{classUserDetector}{UserDetector} $\ast$userDetector, \hyperlink{classZamusModel}{ZamusModel} \&zamusModel, \hyperlink{classLinqModel}{LinqModel} \&linqModel)
+\item 
+void \hyperlink{classNeutralModel_a5a43982c4fa91e7a0751307b190b9900}{drawNeutral} (XnUserID player)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the drawing of the users when they are not transfomated in some character. This class draws a stick figure over the users when they are been tracked but not transformated. Depending on the state of the user, it draws some parts of the characters models.
+
+When the players are not tracked, this draws a diamond in their center of mass. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classNeutralModel_ae6dcf993ce557c9d12b4f647a9315402}{
+\index{NeutralModel@{NeutralModel}!joints@{joints}}
+\index{joints@{joints}!NeutralModel@{NeutralModel}}
+\subsubsection[{joints}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf NeutralModel::joints}}}
+\label{classNeutralModel_ae6dcf993ce557c9d12b4f647a9315402}
+Joints enum.
+
+This enumerate the joints that this class will use. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNeutralModel_acc468e49cc6ccad440a869d3e3dfbef9}{
+\index{NeutralModel@{NeutralModel}!NeutralModel@{NeutralModel}}
+\index{NeutralModel@{NeutralModel}!NeutralModel@{NeutralModel}}
+\subsubsection[{NeutralModel}]{\setlength{\rightskip}{0pt plus 5cm}NeutralModel::NeutralModel ()}}
+\label{classNeutralModel_acc468e49cc6ccad440a869d3e3dfbef9}
+Constructor. \hypertarget{classNeutralModel_a4de591c21128f7fe002aae39d38e2aaf}{
+\index{NeutralModel@{NeutralModel}!NeutralModel@{NeutralModel}}
+\index{NeutralModel@{NeutralModel}!NeutralModel@{NeutralModel}}
+\subsubsection[{NeutralModel}]{\setlength{\rightskip}{0pt plus 5cm}NeutralModel::NeutralModel ({\bf UserDetector} $\ast$ {\em userDetector}, \/  {\bf ZamusModel} \& {\em zamusModel}, \/  {\bf LinqModel} \& {\em linqModel})}}
+\label{classNeutralModel_a4de591c21128f7fe002aae39d38e2aaf}
+Constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classNeutralModel_a5a43982c4fa91e7a0751307b190b9900}{
+\index{NeutralModel@{NeutralModel}!drawNeutral@{drawNeutral}}
+\index{drawNeutral@{drawNeutral}!NeutralModel@{NeutralModel}}
+\subsubsection[{drawNeutral}]{\setlength{\rightskip}{0pt plus 5cm}void NeutralModel::drawNeutral (XnUserID {\em player})}}
+\label{classNeutralModel_a5a43982c4fa91e7a0751307b190b9900}
+DrawNeutral function.
+
+This function draws the stick figure depending on the transforming stage of the player or draws a diamond if the player is not tracked.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em player}]is the ID of the player. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{NeutralModel_8h}{NeutralModel.h}\item 
+src/\hyperlink{NeutralModel_8cpp}{NeutralModel.cpp}\end{DoxyCompactItemize}

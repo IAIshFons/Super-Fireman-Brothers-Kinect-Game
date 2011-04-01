@@ -1,0 +1,147 @@
+\hypertarget{classVector3D}{
+\section{Vector3D Class Reference}
+\label{classVector3D}\index{Vector3D@{Vector3D}}
+}
+
+
+This class is a simple implementation for vector operation calculation.  
+
+
+
+
+{\ttfamily \#include $<$Vector3D.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVector3D_a0b11a8d75da427b27443d8a94d0d296c}{Vector3D} ()
+\item 
+\hyperlink{classVector3D_a78942f6189eb0d5fbf0807b618989dc7}{Vector3D} (float X, float Y, float Z)
+\item 
+\hyperlink{classVector3D_ac20c5842aab3efc1849fa8574f0dc4ff}{Vector3D} (XnPoint3D \&point)
+\item 
+\hyperlink{classVector3D_affff1bab0dfa4dba55acd5cadafb5fcc}{Vector3D} (XnPoint3D \&start, XnPoint3D \&end)
+\item 
+\hyperlink{classVector3D_ae4fde5759270bf5bcf615f12f0823a8c}{$\sim$Vector3D} ()
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classVector3D_aee27c6e25d5975d5ae9cf2066359e656}{operator+} (\hyperlink{classVector3D}{Vector3D} \&v)
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classVector3D_a150eaa071600434aa7a6128218128e59}{operator-\/} (\hyperlink{classVector3D}{Vector3D} \&v)
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classVector3D_ac0335249709d2e203c2871c7310aa475}{operator/} (float f)
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classVector3D_a5a36ff390f5954f79687a3921e031553}{operator$\ast$} (float f)
+\item 
+float \hyperlink{classVector3D_a1139cce4839680afb01a9612eda6e117}{magnitude} ()
+\item 
+void \hyperlink{classVector3D_abfb12ecb9c9beb88e095cc4a1a512d3c}{normalize} ()
+\item 
+float \hyperlink{classVector3D_a4c7a7f410edb124026448080f6f0d72a}{dot} (\hyperlink{classVector3D}{Vector3D} \&v)
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classVector3D_aae87a11cc2fc08fdcde299dc50c23fe1}{cross} (\hyperlink{classVector3D}{Vector3D} \&v)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classVector3D_aca5d15bdb846448e3cb73b072783f329}{
+float {\bfseries x}}
+\label{classVector3D_aca5d15bdb846448e3cb73b072783f329}
+
+\item 
+\hypertarget{classVector3D_a9b6d194fcf526d7d4f9e902421285e94}{
+float {\bfseries y}}
+\label{classVector3D_a9b6d194fcf526d7d4f9e902421285e94}
+
+\item 
+\hypertarget{classVector3D_af9728f1eba23b9ee091755346214f391}{
+float {\bfseries z}}
+\label{classVector3D_af9728f1eba23b9ee091755346214f391}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a simple implementation for vector operation calculation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVector3D_a0b11a8d75da427b27443d8a94d0d296c}{
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection[{Vector3D}]{\setlength{\rightskip}{0pt plus 5cm}Vector3D::Vector3D ()}}
+\label{classVector3D_a0b11a8d75da427b27443d8a94d0d296c}
+Constructor. \hypertarget{classVector3D_a78942f6189eb0d5fbf0807b618989dc7}{
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection[{Vector3D}]{\setlength{\rightskip}{0pt plus 5cm}Vector3D::Vector3D (float {\em X}, \/  float {\em Y}, \/  float {\em Z})}}
+\label{classVector3D_a78942f6189eb0d5fbf0807b618989dc7}
+Constructor. \hypertarget{classVector3D_ac20c5842aab3efc1849fa8574f0dc4ff}{
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection[{Vector3D}]{\setlength{\rightskip}{0pt plus 5cm}Vector3D::Vector3D (XnPoint3D \& {\em point})}}
+\label{classVector3D_ac20c5842aab3efc1849fa8574f0dc4ff}
+Constructor. \hypertarget{classVector3D_affff1bab0dfa4dba55acd5cadafb5fcc}{
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!Vector3D@{Vector3D}}
+\subsubsection[{Vector3D}]{\setlength{\rightskip}{0pt plus 5cm}Vector3D::Vector3D (XnPoint3D \& {\em start}, \/  XnPoint3D \& {\em end})}}
+\label{classVector3D_affff1bab0dfa4dba55acd5cadafb5fcc}
+Constructor.
+
+Create a vector that represent the distance between the start point and the end point.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em start}]is the origin of the vector. \item[{\em end}]is the end point of the vector. \end{DoxyParams}
+\hypertarget{classVector3D_ae4fde5759270bf5bcf615f12f0823a8c}{
+\index{Vector3D@{Vector3D}!$\sim$Vector3D@{$\sim$Vector3D}}
+\index{$\sim$Vector3D@{$\sim$Vector3D}!Vector3D@{Vector3D}}
+\subsubsection[{$\sim$Vector3D}]{\setlength{\rightskip}{0pt plus 5cm}Vector3D::$\sim$Vector3D ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classVector3D_ae4fde5759270bf5bcf615f12f0823a8c}
+Destructor of the class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classVector3D_aae87a11cc2fc08fdcde299dc50c23fe1}{
+\index{Vector3D@{Vector3D}!cross@{cross}}
+\index{cross@{cross}!Vector3D@{Vector3D}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} Vector3D::cross ({\bf Vector3D} \& {\em v})}}
+\label{classVector3D_aae87a11cc2fc08fdcde299dc50c23fe1}
+Cross product between twe vectors. \hypertarget{classVector3D_a4c7a7f410edb124026448080f6f0d72a}{
+\index{Vector3D@{Vector3D}!dot@{dot}}
+\index{dot@{dot}!Vector3D@{Vector3D}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}float Vector3D::dot ({\bf Vector3D} \& {\em v})}}
+\label{classVector3D_a4c7a7f410edb124026448080f6f0d72a}
+Dot product. \hypertarget{classVector3D_a1139cce4839680afb01a9612eda6e117}{
+\index{Vector3D@{Vector3D}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!Vector3D@{Vector3D}}
+\subsubsection[{magnitude}]{\setlength{\rightskip}{0pt plus 5cm}float Vector3D::magnitude ()}}
+\label{classVector3D_a1139cce4839680afb01a9612eda6e117}
+Get the magnitude from the vector. \hypertarget{classVector3D_abfb12ecb9c9beb88e095cc4a1a512d3c}{
+\index{Vector3D@{Vector3D}!normalize@{normalize}}
+\index{normalize@{normalize}!Vector3D@{Vector3D}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}void Vector3D::normalize ()}}
+\label{classVector3D_abfb12ecb9c9beb88e095cc4a1a512d3c}
+Normalize the vector. \hypertarget{classVector3D_a5a36ff390f5954f79687a3921e031553}{
+\index{Vector3D@{Vector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector3D@{Vector3D}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} Vector3D::operator$\ast$ (float {\em f})}}
+\label{classVector3D_a5a36ff390f5954f79687a3921e031553}
+Overloaded operator multiplication. \hypertarget{classVector3D_aee27c6e25d5975d5ae9cf2066359e656}{
+\index{Vector3D@{Vector3D}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector3D@{Vector3D}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} Vector3D::operator+ ({\bf Vector3D} \& {\em v})}}
+\label{classVector3D_aee27c6e25d5975d5ae9cf2066359e656}
+Overloaded operator plus. \hypertarget{classVector3D_a150eaa071600434aa7a6128218128e59}{
+\index{Vector3D@{Vector3D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector3D@{Vector3D}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} Vector3D::operator-\/ ({\bf Vector3D} \& {\em v})}}
+\label{classVector3D_a150eaa071600434aa7a6128218128e59}
+Overloaded operator minus. \hypertarget{classVector3D_ac0335249709d2e203c2871c7310aa475}{
+\index{Vector3D@{Vector3D}!operator/@{operator/}}
+\index{operator/@{operator/}!Vector3D@{Vector3D}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} Vector3D::operator/ (float {\em f})}}
+\label{classVector3D_ac0335249709d2e203c2871c7310aa475}
+Overloaded operator divition. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Vector3D_8h}{Vector3D.h}\item 
+src/\hyperlink{Vector3D_8cpp}{Vector3D.cpp}\end{DoxyCompactItemize}

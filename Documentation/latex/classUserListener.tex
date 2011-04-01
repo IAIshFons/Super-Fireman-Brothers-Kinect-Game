@@ -1,0 +1,175 @@
+\hypertarget{classUserListener}{
+\section{UserListener Class Reference}
+\label{classUserListener}\index{UserListener@{UserListener}}
+}
+
+
+User listener abstract class represents the different users types that the application can contain, p.e, \hyperlink{classZamus}{Zamus}, \hyperlink{classLinq}{Linq}.  
+
+
+
+
+{\ttfamily \#include $<$UserListener.h$>$}
+
+Inheritance diagram for UserListener:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classUserListener}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserListener_a593567c1539186c1b3e5781be52bfd80}{UserListener} ()
+\item 
+\hyperlink{classUserListener_abca800235b1afb94a98e28412e971a9e}{$\sim$UserListener} ()
+\item 
+virtual bool \hyperlink{classUserListener_aea80d4da192afaf0329cf92e4489fd0a}{isListened} (XnUserID userID)
+\item 
+virtual int \hyperlink{classUserListener_ad28b54b309b207f197ed238263d1014e}{retLisUserStage} (XnUserID userID)
+\item 
+virtual void \hyperlink{classUserListener_a4e7335d446ea94445305fb88b5612091}{newUser} (XnUserID userID)
+\item 
+virtual void \hyperlink{classUserListener_a399b56657670357e6545536732c38da2}{lostUser} (XnUserID userID)
+\item 
+virtual void \hyperlink{classUserListener_ae54282ac916fa8e2735b69a4d474c73a}{startCalibration} (XnUserID userID)
+\item 
+virtual void \hyperlink{classUserListener_a76796b86efc4cc8fc1fc250149092c1e}{endCalibration} (XnUserID userID, XnBool Success)
+\item 
+virtual void \hyperlink{classUserListener_a52680abee2bb2da94e748b394a435edc}{poseDetected} (const XnChar $\ast$poseName, XnUserID userID)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classUserListener_a97d89eef39e5c96b3d94582aad460cfe}{listenerType}
+\item 
+map$<$ XnUserID, int $>$ \hyperlink{classUserListener_ad061c4f8f4041c730b4b1f14a11b288a}{usersListened}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User listener abstract class represents the different users types that the application can contain, p.e, \hyperlink{classZamus}{Zamus}, \hyperlink{classLinq}{Linq}. This class is used to contain the information of the users that are listened and as an abstract class for the user listener types \hyperlink{classZamus}{Zamus} and \hyperlink{classLinq}{Linq}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUserListener_a593567c1539186c1b3e5781be52bfd80}{
+\index{UserListener@{UserListener}!UserListener@{UserListener}}
+\index{UserListener@{UserListener}!UserListener@{UserListener}}
+\subsubsection[{UserListener}]{\setlength{\rightskip}{0pt plus 5cm}UserListener::UserListener ()}}
+\label{classUserListener_a593567c1539186c1b3e5781be52bfd80}
+Constructor of the class. \hypertarget{classUserListener_abca800235b1afb94a98e28412e971a9e}{
+\index{UserListener@{UserListener}!$\sim$UserListener@{$\sim$UserListener}}
+\index{$\sim$UserListener@{$\sim$UserListener}!UserListener@{UserListener}}
+\subsubsection[{$\sim$UserListener}]{\setlength{\rightskip}{0pt plus 5cm}UserListener::$\sim$UserListener ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classUserListener_abca800235b1afb94a98e28412e971a9e}
+Class destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classUserListener_a76796b86efc4cc8fc1fc250149092c1e}{
+\index{UserListener@{UserListener}!endCalibration@{endCalibration}}
+\index{endCalibration@{endCalibration}!UserListener@{UserListener}}
+\subsubsection[{endCalibration}]{\setlength{\rightskip}{0pt plus 5cm}virtual void UserListener::endCalibration (XnUserID {\em userID}, \/  XnBool {\em Success})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classUserListener_a76796b86efc4cc8fc1fc250149092c1e}
+Callback function called when calibration of the user ends. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user calibrated. \item[{\em success}]indicates if the calibration succeded or not. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classUserDetector_a89a1b34569957c5cd4001c72561b554c}{UserDetector}.
+
+\hypertarget{classUserListener_aea80d4da192afaf0329cf92e4489fd0a}{
+\index{UserListener@{UserListener}!isListened@{isListened}}
+\index{isListened@{isListened}!UserListener@{UserListener}}
+\subsubsection[{isListened}]{\setlength{\rightskip}{0pt plus 5cm}bool UserListener::isListened (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserListener_aea80d4da192afaf0329cf92e4489fd0a}
+Function that indicates if a user is being listened 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user to be checked. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is listened, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classLinq_a55070b91120aa07225d64f8bd3136c11}{Linq}, and \hyperlink{classZamus_ab76c23d1189599fd0cbbce9352b4faeb}{Zamus}.
+
+\hypertarget{classUserListener_a399b56657670357e6545536732c38da2}{
+\index{UserListener@{UserListener}!lostUser@{lostUser}}
+\index{lostUser@{lostUser}!UserListener@{UserListener}}
+\subsubsection[{lostUser}]{\setlength{\rightskip}{0pt plus 5cm}virtual void UserListener::lostUser (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classUserListener_a399b56657670357e6545536732c38da2}
+Callback function called when an user is lost. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user lost. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classUserDetector_a486ca42bbdc01ef853c82b36cda7cc84}{UserDetector}.
+
+\hypertarget{classUserListener_a4e7335d446ea94445305fb88b5612091}{
+\index{UserListener@{UserListener}!newUser@{newUser}}
+\index{newUser@{newUser}!UserListener@{UserListener}}
+\subsubsection[{newUser}]{\setlength{\rightskip}{0pt plus 5cm}virtual void UserListener::newUser (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classUserListener_a4e7335d446ea94445305fb88b5612091}
+Callback function called when new user appears. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the new user. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classUserDetector_a42845024a854fd79a714c00cfd5fd59b}{UserDetector}.
+
+\hypertarget{classUserListener_a52680abee2bb2da94e748b394a435edc}{
+\index{UserListener@{UserListener}!poseDetected@{poseDetected}}
+\index{poseDetected@{poseDetected}!UserListener@{UserListener}}
+\subsubsection[{poseDetected}]{\setlength{\rightskip}{0pt plus 5cm}virtual void UserListener::poseDetected (const XnChar $\ast$ {\em poseName}, \/  XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classUserListener_a52680abee2bb2da94e748b394a435edc}
+Callback function called when a new pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em poseName}]name of the pose detected. \item[{\em userID}]user ID of the user that made the pose. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classUserDetector_aa1aca77e875b9ab9b2b0b29d55672885}{UserDetector}.
+
+\hypertarget{classUserListener_ad28b54b309b207f197ed238263d1014e}{
+\index{UserListener@{UserListener}!retLisUserStage@{retLisUserStage}}
+\index{retLisUserStage@{retLisUserStage}!UserListener@{UserListener}}
+\subsubsection[{retLisUserStage}]{\setlength{\rightskip}{0pt plus 5cm}int UserListener::retLisUserStage (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classUserListener_ad28b54b309b207f197ed238263d1014e}
+Return the listener user Stage (Transformed). This function could be replaced because the only way that a user could be in a listener is that the user must be in TRANSFORMED stage. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the intended user. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stage of the user. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classLinq_a6994af326a734f473eae3983b32a5148}{Linq}, and \hyperlink{classZamus_a727befa3608295027c9db889af9556c1}{Zamus}.
+
+\hypertarget{classUserListener_ae54282ac916fa8e2735b69a4d474c73a}{
+\index{UserListener@{UserListener}!startCalibration@{startCalibration}}
+\index{startCalibration@{startCalibration}!UserListener@{UserListener}}
+\subsubsection[{startCalibration}]{\setlength{\rightskip}{0pt plus 5cm}virtual void UserListener::startCalibration (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classUserListener_ae54282ac916fa8e2735b69a4d474c73a}
+Callback function called when the calibration for a detected user begins. 
+\begin{DoxyParams}{Parameters}
+\item[{\em user}]ID of the user to be calibrated. \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classUserDetector_a2681776dca3ec63bfc77528504354512}{UserDetector}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classUserListener_a97d89eef39e5c96b3d94582aad460cfe}{
+\index{UserListener@{UserListener}!listenerType@{listenerType}}
+\index{listenerType@{listenerType}!UserListener@{UserListener}}
+\subsubsection[{listenerType}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf UserListener::listenerType}}}
+\label{classUserListener_a97d89eef39e5c96b3d94582aad460cfe}
+Indicates the listener type (\hyperlink{classZamus}{Zamus} or \hyperlink{classLinq}{Linq}), it uses the macros ZAMUS\_\-TYPE and LINQ\_\-TYPE. \hypertarget{classUserListener_ad061c4f8f4041c730b4b1f14a11b288a}{
+\index{UserListener@{UserListener}!usersListened@{usersListened}}
+\index{usersListened@{usersListened}!UserListener@{UserListener}}
+\subsubsection[{usersListened}]{\setlength{\rightskip}{0pt plus 5cm}map$<$XnUserID, int$>$ {\bf UserListener::usersListened}}}
+\label{classUserListener_ad061c4f8f4041c730b4b1f14a11b288a}
+Map of users IDs and status of users associated with the listener. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{UserListener_8h}{UserListener.h}\item 
+src/\hyperlink{UserListener_8cpp}{UserListener.cpp}\end{DoxyCompactItemize}

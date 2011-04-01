@@ -1,0 +1,82 @@
+\hypertarget{classSceneRenderer}{
+\section{SceneRenderer Class Reference}
+\label{classSceneRenderer}\index{SceneRenderer@{SceneRenderer}}
+}
+
+
+This class handle the graphic part of the program.  
+
+
+
+
+{\ttfamily \#include $<$SceneRenderer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSceneRenderer_a925fa6a7da05d79bf80ea806912665a7}{SceneRenderer} ()
+\item 
+\hyperlink{classSceneRenderer_a0226fa3a32e9f5fcb1f155301713de85}{SceneRenderer} (ImageGenerator $\ast$igen, DepthGenerator $\ast$dgen, SceneAnalyzer $\ast$sa, \hyperlink{classUserDetector}{UserDetector} $\ast$ugen, \hyperlink{classZamus}{Zamus} $\ast$zamus, \hyperlink{classLinq}{Linq} $\ast$linq)
+\item 
+\hyperlink{classSceneRenderer_aceec75b5c04861c2a5c26349c2ba5748}{$\sim$SceneRenderer} ()
+\item 
+void \hyperlink{classSceneRenderer_ae6ca19a65696503e8dea028219fd3fba}{drawScene} ()
+\item 
+void \hyperlink{classSceneRenderer_ab104ce38576705968a1ced2cdd16b178}{switchDrawImage} ()
+\item 
+void \hyperlink{classSceneRenderer_a43045a5662099ef3064f902566875bcb}{switchDrawUser} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handle the graphic part of the program. In this class we handle the graphic part of the program. It has basically one principal function. The function \hyperlink{classSceneRenderer_ae6ca19a65696503e8dea028219fd3fba}{drawScene()} is called from the main function and there is where all the openGL part is done. Also, here are defined functions to draw the 3D models that maybe will be move to other files y next versions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSceneRenderer_a925fa6a7da05d79bf80ea806912665a7}{
+\index{SceneRenderer@{SceneRenderer}!SceneRenderer@{SceneRenderer}}
+\index{SceneRenderer@{SceneRenderer}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{SceneRenderer}]{\setlength{\rightskip}{0pt plus 5cm}SceneRenderer::SceneRenderer ()}}
+\label{classSceneRenderer_a925fa6a7da05d79bf80ea806912665a7}
+Constructor of the Class.
+
+This constructor not need arguments. \hypertarget{classSceneRenderer_a0226fa3a32e9f5fcb1f155301713de85}{
+\index{SceneRenderer@{SceneRenderer}!SceneRenderer@{SceneRenderer}}
+\index{SceneRenderer@{SceneRenderer}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{SceneRenderer}]{\setlength{\rightskip}{0pt plus 5cm}SceneRenderer::SceneRenderer (ImageGenerator $\ast$ {\em igen}, \/  DepthGenerator $\ast$ {\em dgen}, \/  SceneAnalyzer $\ast$ {\em sa}, \/  {\bf UserDetector} $\ast$ {\em ugen}, \/  {\bf Zamus} $\ast$ {\em zamus}, \/  {\bf Linq} $\ast$ {\em linq})}}
+\label{classSceneRenderer_a0226fa3a32e9f5fcb1f155301713de85}
+Constructor of the class.
+
+This constructor get the image and the user generator.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em igen}]an image generator pointer. \item[{\em dgen}]a depth generator pointer. \item[{\em ugen}]a user detector pointer. \item[{\em zamus}]a zamus detector pointer. \item[{\em linq}]a linq detector pointer. \end{DoxyParams}
+\hypertarget{classSceneRenderer_aceec75b5c04861c2a5c26349c2ba5748}{
+\index{SceneRenderer@{SceneRenderer}!$\sim$SceneRenderer@{$\sim$SceneRenderer}}
+\index{$\sim$SceneRenderer@{$\sim$SceneRenderer}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{$\sim$SceneRenderer}]{\setlength{\rightskip}{0pt plus 5cm}SceneRenderer::$\sim$SceneRenderer ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classSceneRenderer_aceec75b5c04861c2a5c26349c2ba5748}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSceneRenderer_ae6ca19a65696503e8dea028219fd3fba}{
+\index{SceneRenderer@{SceneRenderer}!drawScene@{drawScene}}
+\index{drawScene@{drawScene}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{drawScene}]{\setlength{\rightskip}{0pt plus 5cm}void SceneRenderer::drawScene ()}}
+\label{classSceneRenderer_ae6ca19a65696503e8dea028219fd3fba}
+The principal function of the class. This function execute all the openGL part of the program. \hypertarget{classSceneRenderer_ab104ce38576705968a1ced2cdd16b178}{
+\index{SceneRenderer@{SceneRenderer}!switchDrawImage@{switchDrawImage}}
+\index{switchDrawImage@{switchDrawImage}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{switchDrawImage}]{\setlength{\rightskip}{0pt plus 5cm}void SceneRenderer::switchDrawImage ()}}
+\label{classSceneRenderer_ab104ce38576705968a1ced2cdd16b178}
+This function activate or deactivate the RGB image drawing. Basically it switches a bool variable to indicate to the function drawScene if it must draw the RGB image in a plane. \hypertarget{classSceneRenderer_a43045a5662099ef3064f902566875bcb}{
+\index{SceneRenderer@{SceneRenderer}!switchDrawUser@{switchDrawUser}}
+\index{switchDrawUser@{switchDrawUser}!SceneRenderer@{SceneRenderer}}
+\subsubsection[{switchDrawUser}]{\setlength{\rightskip}{0pt plus 5cm}void SceneRenderer::switchDrawUser ()}}
+\label{classSceneRenderer_a43045a5662099ef3064f902566875bcb}
+This function activate or deactivate the drawing of the user pixels image. Basically it switches a bool variable to indicate to the function drawScene if it must draw the user pixels when detected over the plane that might have the RGB image. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SceneRenderer_8h}{SceneRenderer.h}\item 
+src/\hyperlink{SceneRenderer_8cpp}{SceneRenderer.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{classSuperFiremanBrothers}{
+\section{SuperFiremanBrothers Class Reference}
+\label{classSuperFiremanBrothers}\index{SuperFiremanBrothers@{SuperFiremanBrothers}}
+}
+
+
+This class handles the functions and methods for the Super Fireman Brothers game.  
+
+
+
+
+{\ttfamily \#include $<$SuperFiremanBrothers.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSuperFiremanBrothers_abe477c6e372321590553ff470df34a54}{SuperFiremanBrothers} ()
+\item 
+\hyperlink{classSuperFiremanBrothers_a936a3dd9d6ee953f7f064f56affd85b3}{SuperFiremanBrothers} (\hyperlink{classUserDetector}{UserDetector} $\ast$ud, SceneAnalyzer $\ast$sa, \hyperlink{classZamus}{Zamus} $\ast$zd, \hyperlink{classLinq}{Linq} $\ast$ld, int mp)
+\item 
+\hyperlink{classSuperFiremanBrothers_a662a1f55259ebe79b80200e0dc0d25a8}{$\sim$SuperFiremanBrothers} ()
+\item 
+void \hyperlink{classSuperFiremanBrothers_a830c241d1985fa4504b5c4362764a1d1}{checkUsers} ()
+\item 
+void \hyperlink{classSuperFiremanBrothers_ab68b38d4b3287b8119d118e934d383db}{checkGameOver} ()
+\item 
+int \hyperlink{classSuperFiremanBrothers_afd61723532625d9895654ecdf1ab0d96}{retScore} (XnUserID player)
+\item 
+int \hyperlink{classSuperFiremanBrothers_a7a6d295519c8e1ba92be19f2745f040e}{retGameStatus} ()
+\item 
+bool \hyperlink{classSuperFiremanBrothers_a7e3951702064c2d473283e1eb8057b77}{isGameOn} ()
+\item 
+bool \hyperlink{classSuperFiremanBrothers_a2a4f3c77b730abb5a90e281601cf9440}{isGameOver} ()
+\item 
+void \hyperlink{classSuperFiremanBrothers_a2c47eaf4febde6a31420c7f12f855a4a}{drawFireBalls} ()
+\item 
+void \hyperlink{classSuperFiremanBrothers_a6376657264e9c488f276e66f25f9ce08}{drawGameInfo} ()
+\item 
+void \hyperlink{classSuperFiremanBrothers_a3438445a5d0cdc5863dd28edc4bbccbd}{glPrintString} (void $\ast$font, char $\ast$str)
+\item 
+void \hyperlink{classSuperFiremanBrothers_a9ef3423cc1e1b9cb563e4bbf933f5e56}{nextFrame} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the functions and methods for the Super Fireman Brothers game. In this class we implement the functions that are necessary for the game playing. This functions are those referents to game status, starting game, end game conditions, score counting, actual users in the game and the relatives to OpenGL graphics. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSuperFiremanBrothers_abe477c6e372321590553ff470df34a54}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{SuperFiremanBrothers}]{\setlength{\rightskip}{0pt plus 5cm}SuperFiremanBrothers::SuperFiremanBrothers ()}}
+\label{classSuperFiremanBrothers_abe477c6e372321590553ff470df34a54}
+Constructor of the class.
+
+This application consist of a simple game that we called \char`\"{}Super Fireman Brothers\char`\"{}. This applications uses the XBox Kinect sensor to track the player's moves.
+
+Copyright (C) 2011 Alfonso Ros, Ismael Mendonca
+
+This file is part of Super Fireman Brothers.
+
+Super Fireman Brothers is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Super Fireman Brothers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Super Fireman Brothers. Check the txt file \char`\"{}LICENSE\char`\"{}, If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http://www.gnu.org/licenses/}$>$. Constructor of the class. \hypertarget{classSuperFiremanBrothers_a936a3dd9d6ee953f7f064f56affd85b3}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{SuperFiremanBrothers}]{\setlength{\rightskip}{0pt plus 5cm}SuperFiremanBrothers::SuperFiremanBrothers ({\bf UserDetector} $\ast$ {\em ud}, \/  SceneAnalyzer $\ast$ {\em sa}, \/  {\bf Zamus} $\ast$ {\em zd}, \/  {\bf Linq} $\ast$ {\em ld}, \/  int {\em mp})}}
+\label{classSuperFiremanBrothers_a936a3dd9d6ee953f7f064f56affd85b3}
+Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em ud}]pointer to a User Detector type. \item[{\em sa}]pointer to a Scene Analyzer type. \item[{\em zd}]pointer to \hyperlink{classZamus}{Zamus} Listener type. @ṕaram ld pointer to \hyperlink{classLinq}{Linq} Listener type. \item[{\em mp}]max numer of players allowed. \end{DoxyParams}
+\hypertarget{classSuperFiremanBrothers_a662a1f55259ebe79b80200e0dc0d25a8}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!$\sim$SuperFiremanBrothers@{$\sim$SuperFiremanBrothers}}
+\index{$\sim$SuperFiremanBrothers@{$\sim$SuperFiremanBrothers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{$\sim$SuperFiremanBrothers}]{\setlength{\rightskip}{0pt plus 5cm}SuperFiremanBrothers::$\sim$SuperFiremanBrothers ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classSuperFiremanBrothers_a662a1f55259ebe79b80200e0dc0d25a8}
+Class destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSuperFiremanBrothers_ab68b38d4b3287b8119d118e934d383db}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!checkGameOver@{checkGameOver}}
+\index{checkGameOver@{checkGameOver}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{checkGameOver}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::checkGameOver ()}}
+\label{classSuperFiremanBrothers_ab68b38d4b3287b8119d118e934d383db}
+Method that checks the condition required for the game to finish changing the game status depending on the condition assumed. \hypertarget{classSuperFiremanBrothers_a830c241d1985fa4504b5c4362764a1d1}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!checkUsers@{checkUsers}}
+\index{checkUsers@{checkUsers}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{checkUsers}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::checkUsers ()}}
+\label{classSuperFiremanBrothers_a830c241d1985fa4504b5c4362764a1d1}
+Method that checks the users during the game. This function controls the entry of players to the game as well the players that have left the game after it started. \hypertarget{classSuperFiremanBrothers_a2c47eaf4febde6a31420c7f12f855a4a}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!drawFireBalls@{drawFireBalls}}
+\index{drawFireBalls@{drawFireBalls}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{drawFireBalls}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::drawFireBalls ()}}
+\label{classSuperFiremanBrothers_a2c47eaf4febde6a31420c7f12f855a4a}
+Method that draws the Fireballs of the game and controls the vector of fireballs. \hypertarget{classSuperFiremanBrothers_a6376657264e9c488f276e66f25f9ce08}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!drawGameInfo@{drawGameInfo}}
+\index{drawGameInfo@{drawGameInfo}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{drawGameInfo}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::drawGameInfo ()}}
+\label{classSuperFiremanBrothers_a6376657264e9c488f276e66f25f9ce08}
+Draw the scores over the users in the game (openGL). \hypertarget{classSuperFiremanBrothers_a3438445a5d0cdc5863dd28edc4bbccbd}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!glPrintString@{glPrintString}}
+\index{glPrintString@{glPrintString}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{glPrintString}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::glPrintString (void $\ast$ {\em font}, \/  char $\ast$ {\em str})}}
+\label{classSuperFiremanBrothers_a3438445a5d0cdc5863dd28edc4bbccbd}
+Prints the given string to Bitmap. 
+\begin{DoxyParams}{Parameters}
+\item[{\em font}]type of font to print. \item[{\em str}]string to be printed. \end{DoxyParams}
+\hypertarget{classSuperFiremanBrothers_a7e3951702064c2d473283e1eb8057b77}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!isGameOn@{isGameOn}}
+\index{isGameOn@{isGameOn}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{isGameOn}]{\setlength{\rightskip}{0pt plus 5cm}bool SuperFiremanBrothers::isGameOn ()}}
+\label{classSuperFiremanBrothers_a7e3951702064c2d473283e1eb8057b77}
+Method that indicates if the game has started or not. \begin{DoxyReturn}{Returns}
+true if game has started, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classSuperFiremanBrothers_a2a4f3c77b730abb5a90e281601cf9440}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{isGameOver}]{\setlength{\rightskip}{0pt plus 5cm}bool SuperFiremanBrothers::isGameOver ()}}
+\label{classSuperFiremanBrothers_a2a4f3c77b730abb5a90e281601cf9440}
+Method that indicates if the game has finished or not. \begin{DoxyReturn}{Returns}
+true if game has finished, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classSuperFiremanBrothers_a9ef3423cc1e1b9cb563e4bbf933f5e56}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!nextFrame@{nextFrame}}
+\index{nextFrame@{nextFrame}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{nextFrame}]{\setlength{\rightskip}{0pt plus 5cm}void SuperFiremanBrothers::nextFrame ()}}
+\label{classSuperFiremanBrothers_a9ef3423cc1e1b9cb563e4bbf933f5e56}
+Method that controls the fireballs that are going to be spawned per frames. \hypertarget{classSuperFiremanBrothers_a7a6d295519c8e1ba92be19f2745f040e}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!retGameStatus@{retGameStatus}}
+\index{retGameStatus@{retGameStatus}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{retGameStatus}]{\setlength{\rightskip}{0pt plus 5cm}int SuperFiremanBrothers::retGameStatus ()}}
+\label{classSuperFiremanBrothers_a7a6d295519c8e1ba92be19f2745f040e}
+Return the actual game status. \begin{DoxyReturn}{Returns}
+game status. 
+\end{DoxyReturn}
+\hypertarget{classSuperFiremanBrothers_afd61723532625d9895654ecdf1ab0d96}{
+\index{SuperFiremanBrothers@{SuperFiremanBrothers}!retScore@{retScore}}
+\index{retScore@{retScore}!SuperFiremanBrothers@{SuperFiremanBrothers}}
+\subsubsection[{retScore}]{\setlength{\rightskip}{0pt plus 5cm}int SuperFiremanBrothers::retScore (XnUserID {\em player})}}
+\label{classSuperFiremanBrothers_afd61723532625d9895654ecdf1ab0d96}
+Function that returns the score of a specified player. 
+\begin{DoxyParams}{Parameters}
+\item[{\em player}]user ID of the player to check the score. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+score of the player. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SuperFiremanBrothers_8h}{SuperFiremanBrothers.h}\item 
+src/SuperFiremanBrothers.cpp\end{DoxyCompactItemize}

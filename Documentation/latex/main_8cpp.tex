@@ -1,0 +1,222 @@
+\hypertarget{main_8cpp}{
+\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+}
+
+
+main program file.  
+
+
+{\ttfamily \#include \char`\"{}common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}config.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}util.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}SceneRenderer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}../glm/include/glm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Vector3D.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}UserDetector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ZamusModel.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}LinqModel.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ZamusShoot.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}UserListener.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Zamus.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Linq.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}BusterDetector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}IceRodDetector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}LinqSpawnIce.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Flame.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a25a40b6614565f755233080a384c35f1}{initialize} ()
+\item 
+void \hyperlink{main_8cpp_a1181bab90e79e7f771601ac79bff3924}{cleanupExit} ()
+\item 
+void \hyperlink{main_8cpp_accd03d0ab10d5efc1f80a091da7e97a1}{update} (int value)
+\item 
+void \hyperlink{main_8cpp_aa595f6977fbf979c45a1be24da6a5a06}{glutDisplay} (void)
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Context \hyperlink{main_8cpp_a798971432d4a24fe35249199b936fad1}{g\_\-Context}
+\item 
+\hypertarget{main_8cpp_a641df65139aabf25c4fdcb4bda9eb14f}{
+EnumerationErrors {\bfseries g\_\-Error}}
+\label{main_8cpp_a641df65139aabf25c4fdcb4bda9eb14f}
+
+\item 
+\hypertarget{main_8cpp_a20ed6f1f4f2663c042e8e00b9bd090a5}{
+DepthGenerator {\bfseries g\_\-DepthGenerator}}
+\label{main_8cpp_a20ed6f1f4f2663c042e8e00b9bd090a5}
+
+\item 
+\hypertarget{main_8cpp_aeb59b1b858f72ed264dac764ab8db543}{
+UserGenerator {\bfseries g\_\-UserGenerator}}
+\label{main_8cpp_aeb59b1b858f72ed264dac764ab8db543}
+
+\item 
+\hypertarget{main_8cpp_aa8fc7e712fbee6675eb57ef2596f6c7f}{
+ImageGenerator {\bfseries g\_\-ImageGenerator}}
+\label{main_8cpp_aa8fc7e712fbee6675eb57ef2596f6c7f}
+
+\item 
+\hypertarget{main_8cpp_a8c4f36954c48c6e25584185d46e0a294}{
+SceneAnalyzer {\bfseries g\_\-SceneAnalyzer}}
+\label{main_8cpp_a8c4f36954c48c6e25584185d46e0a294}
+
+\item 
+\hypertarget{main_8cpp_a8b395433f7785a4e117a939d6947b826}{
+SceneMetaData {\bfseries g\_\-SceneMD}}
+\label{main_8cpp_a8b395433f7785a4e117a939d6947b826}
+
+\item 
+\hyperlink{classUserDetector}{UserDetector} \hyperlink{main_8cpp_a149fa9de22cc7305e77322c2a0e45d6d}{g\_\-UserDetector}
+\item 
+\hypertarget{main_8cpp_aba5eb90d8e99d6b91c99fdcf1e1e657e}{
+\hyperlink{classSceneRenderer}{SceneRenderer} {\bfseries g\_\-SceneRenderer}}
+\label{main_8cpp_aba5eb90d8e99d6b91c99fdcf1e1e657e}
+
+\item 
+\hypertarget{main_8cpp_ad9c5900bb5efda7b3d14512d3793b0bf}{
+\hyperlink{classZamus}{Zamus} $\ast$ {\bfseries g\_\-ZamusDetector}}
+\label{main_8cpp_ad9c5900bb5efda7b3d14512d3793b0bf}
+
+\item 
+\hypertarget{main_8cpp_a4c42b527362aae15aabe401835000b1d}{
+\hyperlink{classLinq}{Linq} $\ast$ {\bfseries g\_\-LinqDetector}}
+\label{main_8cpp_a4c42b527362aae15aabe401835000b1d}
+
+\item 
+\hypertarget{main_8cpp_a8ef35392cf22c8814f476b066bf7934b}{
+\hyperlink{classBusterDetector}{BusterDetector} $\ast$ {\bfseries g\_\-BusterDetector}}
+\label{main_8cpp_a8ef35392cf22c8814f476b066bf7934b}
+
+\item 
+\hypertarget{main_8cpp_a65e604e8a183244a4f78f47b0dfd68bf}{
+\hyperlink{classIceRodDetector}{IceRodDetector} $\ast$ {\bfseries g\_\-IceRodDetector}}
+\label{main_8cpp_a65e604e8a183244a4f78f47b0dfd68bf}
+
+\item 
+\hypertarget{main_8cpp_aa18877f69136e9c798dc26e4bdf7f4a3}{
+\hyperlink{classSuperFiremanBrothers}{SuperFiremanBrothers} {\bfseries g\_\-SFBgame}}
+\label{main_8cpp_aa18877f69136e9c798dc26e4bdf7f4a3}
+
+\item 
+\hypertarget{main_8cpp_a0a439bd8d3ed76904c0993faa23da3d9}{
+int {\bfseries g\_\-MaxPlayers}}
+\label{main_8cpp_a0a439bd8d3ed76904c0993faa23da3d9}
+
+\item 
+\hypertarget{main_8cpp_a1b0c59d009eb244516447e0bb37dc1d5}{
+int {\bfseries g\_\-gameOver}}
+\label{main_8cpp_a1b0c59d009eb244516447e0bb37dc1d5}
+
+\item 
+GLfloat \hyperlink{main_8cpp_ac7ad37ae4afcfdfd4c5c834549c4506a}{light\_\-diffuse} \mbox{[}$\,$\mbox{]} = \{0.8, 0.8, 0.8, 1.0\}
+\item 
+\hypertarget{main_8cpp_a82e9468dc563fffeade414a75d56945c}{
+GLfloat {\bfseries light\_\-ambient} \mbox{[}$\,$\mbox{]} = \{0.2, 0.2, 0.2, 1.0\}}
+\label{main_8cpp_a82e9468dc563fffeade414a75d56945c}
+
+\item 
+\hypertarget{main_8cpp_afcdcf346c3c36aa1926c317ab5c8e089}{
+GLfloat {\bfseries light\_\-specular} \mbox{[}$\,$\mbox{]} = \{ 0.7, 0.7, 0.3, 1.0 \}}
+\label{main_8cpp_afcdcf346c3c36aa1926c317ab5c8e089}
+
+\item 
+\hypertarget{main_8cpp_a9150217d8e8a347844efee8624dd5ee4}{
+GLfloat {\bfseries light\_\-position} \mbox{[}$\,$\mbox{]} = \{-\/10.0,-\/10.0, 20.0, 0.0\}}
+\label{main_8cpp_a9150217d8e8a347844efee8624dd5ee4}
+
+\item 
+GLfloat \hyperlink{main_8cpp_a339e0a734bbd4f13e66525b133d5dc93}{mat\_\-diffuse} \mbox{[}$\,$\mbox{]} = \{ 0.9, 0.9, 0.9, 0.9 \}
+\item 
+\hypertarget{main_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}{
+GLfloat {\bfseries mat\_\-specular} \mbox{[}$\,$\mbox{]} = \{ 0.3, 0.3, 0.3, 0.3 \}}
+\label{main_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}
+
+\item 
+\hypertarget{main_8cpp_adfc8820858e84f99762a3f27350fc384}{
+GLfloat {\bfseries mat\_\-shininess} \mbox{[}$\,$\mbox{]} = \{ 10.0 \}}
+\label{main_8cpp_adfc8820858e84f99762a3f27350fc384}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main program file. This application consist of a simple game that we called \char`\"{}Super Fireman Brothers\char`\"{}. This applications uses the XBox Kinect sensor to track the player's moves.
+
+Copyright (C) 2011 Alfonso Ros, Ismael Mendonca
+
+This file is part of Super Fireman Brothers.
+
+Super Fireman Brothers is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Super Fireman Brothers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Super Fireman Brothers. Check the txt file \char`\"{}LICENSE\char`\"{}, If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http://www.gnu.org/licenses/}$>$.
+
+This is the main program file. 
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_a1181bab90e79e7f771601ac79bff3924}{
+\index{main.cpp@{main.cpp}!cleanupExit@{cleanupExit}}
+\index{cleanupExit@{cleanupExit}!main.cpp@{main.cpp}}
+\subsubsection[{cleanupExit}]{\setlength{\rightskip}{0pt plus 5cm}void cleanupExit ()}}
+\label{main_8cpp_a1181bab90e79e7f771601ac79bff3924}
+Shut down the context generation \hypertarget{main_8cpp_aa595f6977fbf979c45a1be24da6a5a06}{
+\index{main.cpp@{main.cpp}!glutDisplay@{glutDisplay}}
+\index{glutDisplay@{glutDisplay}!main.cpp@{main.cpp}}
+\subsubsection[{glutDisplay}]{\setlength{\rightskip}{0pt plus 5cm}void glutDisplay (void)}}
+\label{main_8cpp_aa595f6977fbf979c45a1be24da6a5a06}
+OpenGL display function.
+
+This function is called every 25 milliseconds by the update function. 
+
+Update every node of OpenNI.
+
+Use the draw functions of every class to display the game with OpenGL.
+
+\hypertarget{main_8cpp_a25a40b6614565f755233080a384c35f1}{
+\index{main.cpp@{main.cpp}!initialize@{initialize}}
+\index{initialize@{initialize}!main.cpp@{main.cpp}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void initialize ()}}
+\label{main_8cpp_a25a40b6614565f755233080a384c35f1}
+Initialize XN functions \hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]})}}
+\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+Main Program \hypertarget{main_8cpp_accd03d0ab10d5efc1f80a091da7e97a1}{
+\index{main.cpp@{main.cpp}!update@{update}}
+\index{update@{update}!main.cpp@{main.cpp}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void update (int {\em value})}}
+\label{main_8cpp_accd03d0ab10d5efc1f80a091da7e97a1}
+OpenGL Functions OpenGL update function.
+
+This function calls the display function every 25 milliseconds. 
+
+\subsection{Variable Documentation}
+\hypertarget{main_8cpp_a798971432d4a24fe35249199b936fad1}{
+\index{main.cpp@{main.cpp}!g\_\-Context@{g\_\-Context}}
+\index{g\_\-Context@{g\_\-Context}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-Context}]{\setlength{\rightskip}{0pt plus 5cm}Context {\bf g\_\-Context}}}
+\label{main_8cpp_a798971432d4a24fe35249199b936fad1}
+OpenNI objects forward declarations. \hypertarget{main_8cpp_a149fa9de22cc7305e77322c2a0e45d6d}{
+\index{main.cpp@{main.cpp}!g\_\-UserDetector@{g\_\-UserDetector}}
+\index{g\_\-UserDetector@{g\_\-UserDetector}!main.cpp@{main.cpp}}
+\subsubsection[{g\_\-UserDetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserDetector} {\bf g\_\-UserDetector}}}
+\label{main_8cpp_a149fa9de22cc7305e77322c2a0e45d6d}
+Forward declaration of our clases. \hypertarget{main_8cpp_ac7ad37ae4afcfdfd4c5c834549c4506a}{
+\index{main.cpp@{main.cpp}!light\_\-diffuse@{light\_\-diffuse}}
+\index{light\_\-diffuse@{light\_\-diffuse}!main.cpp@{main.cpp}}
+\subsubsection[{light\_\-diffuse}]{\setlength{\rightskip}{0pt plus 5cm}GLfloat {\bf light\_\-diffuse}\mbox{[}$\,$\mbox{]} = \{0.8, 0.8, 0.8, 1.0\}}}
+\label{main_8cpp_ac7ad37ae4afcfdfd4c5c834549c4506a}
+Lights \hypertarget{main_8cpp_a339e0a734bbd4f13e66525b133d5dc93}{
+\index{main.cpp@{main.cpp}!mat\_\-diffuse@{mat\_\-diffuse}}
+\index{mat\_\-diffuse@{mat\_\-diffuse}!main.cpp@{main.cpp}}
+\subsubsection[{mat\_\-diffuse}]{\setlength{\rightskip}{0pt plus 5cm}GLfloat {\bf mat\_\-diffuse}\mbox{[}$\,$\mbox{]} = \{ 0.9, 0.9, 0.9, 0.9 \}}}
+\label{main_8cpp_a339e0a734bbd4f13e66525b133d5dc93}
+Materials 

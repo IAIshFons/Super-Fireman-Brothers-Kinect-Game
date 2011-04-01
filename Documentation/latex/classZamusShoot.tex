@@ -1,0 +1,109 @@
+\hypertarget{classZamusShoot}{
+\section{ZamusShoot Class Reference}
+\label{classZamusShoot}\index{ZamusShoot@{ZamusShoot}}
+}
+
+
+This class contain the information about one shoot of water from \hyperlink{classZamus}{Zamus}. The direction of the shoot and the position.  
+
+
+
+
+{\ttfamily \#include $<$ZamusShoot.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classZamusShoot_afa64b29375e211b297ef9df3b62df407}{ZamusShoot} ()
+\item 
+\hyperlink{classZamusShoot_a095a021221dda360f8d907a10c93d8f4}{ZamusShoot} (XnPoint3D pos, \hyperlink{classVector3D}{Vector3D} dir, XnUserID p)
+\item 
+bool \hyperlink{classZamusShoot_a2cf4ee36add75a60a667d04f59b1fd03}{isAlive} ()
+\item 
+void \hyperlink{classZamusShoot_a59597b88cd171964a8f240da485e69c4}{nextPosition} ()
+\item 
+void \hyperlink{classZamusShoot_a45f1492b67c2d5aa7b370db5a964152b}{drawShoot} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+XnPoint3D \hyperlink{classZamusShoot_a4ea6fd218d7bf2371e53b944042ec7cc}{initialPosition}
+\item 
+XnPoint3D \hyperlink{classZamusShoot_a1705d9588502985250c1732ee1215c41}{position}
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classZamusShoot_a77f14fc25129a676ec070a77220c6174}{direction}
+\item 
+XnUserID \hyperlink{classZamusShoot_a38bfd1383bd11ee5d68d22de84904a9f}{player}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contain the information about one shoot of water from \hyperlink{classZamus}{Zamus}. The direction of the shoot and the position. It also has the function to draw it in OpenGL. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classZamusShoot_afa64b29375e211b297ef9df3b62df407}{
+\index{ZamusShoot@{ZamusShoot}!ZamusShoot@{ZamusShoot}}
+\index{ZamusShoot@{ZamusShoot}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{ZamusShoot}]{\setlength{\rightskip}{0pt plus 5cm}ZamusShoot::ZamusShoot ()}}
+\label{classZamusShoot_afa64b29375e211b297ef9df3b62df407}
+Constructor of the Class. \hypertarget{classZamusShoot_a095a021221dda360f8d907a10c93d8f4}{
+\index{ZamusShoot@{ZamusShoot}!ZamusShoot@{ZamusShoot}}
+\index{ZamusShoot@{ZamusShoot}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{ZamusShoot}]{\setlength{\rightskip}{0pt plus 5cm}ZamusShoot::ZamusShoot (XnPoint3D {\em pos}, \/  {\bf Vector3D} {\em dir}, \/  XnUserID {\em p})}}
+\label{classZamusShoot_a095a021221dda360f8d907a10c93d8f4}
+Constructor of the Class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classZamusShoot_a45f1492b67c2d5aa7b370db5a964152b}{
+\index{ZamusShoot@{ZamusShoot}!drawShoot@{drawShoot}}
+\index{drawShoot@{drawShoot}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{drawShoot}]{\setlength{\rightskip}{0pt plus 5cm}void ZamusShoot::drawShoot ()}}
+\label{classZamusShoot_a45f1492b67c2d5aa7b370db5a964152b}
+Uses the OpenGL functions to draw the sphere representing the water shoot. \hypertarget{classZamusShoot_a2cf4ee36add75a60a667d04f59b1fd03}{
+\index{ZamusShoot@{ZamusShoot}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{isAlive}]{\setlength{\rightskip}{0pt plus 5cm}bool ZamusShoot::isAlive ()}}
+\label{classZamusShoot_a2cf4ee36add75a60a667d04f59b1fd03}
+True if the shoot is not too far.
+
+\begin{DoxyReturn}{Returns}
+true if the shoot is not too far or false if it passed the Z\_\-SHOOT\_\-MAX\_\-DIST limit. 
+\end{DoxyReturn}
+\hypertarget{classZamusShoot_a59597b88cd171964a8f240da485e69c4}{
+\index{ZamusShoot@{ZamusShoot}!nextPosition@{nextPosition}}
+\index{nextPosition@{nextPosition}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{nextPosition}]{\setlength{\rightskip}{0pt plus 5cm}void ZamusShoot::nextPosition ()}}
+\label{classZamusShoot_a59597b88cd171964a8f240da485e69c4}
+Set the next position of the shoot by the parameters set in the \hyperlink{config_8h}{config.h} file. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classZamusShoot_a77f14fc25129a676ec070a77220c6174}{
+\index{ZamusShoot@{ZamusShoot}!direction@{direction}}
+\index{direction@{direction}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} {\bf ZamusShoot::direction}}}
+\label{classZamusShoot_a77f14fc25129a676ec070a77220c6174}
+Direction from where the shoot goes. \hypertarget{classZamusShoot_a4ea6fd218d7bf2371e53b944042ec7cc}{
+\index{ZamusShoot@{ZamusShoot}!initialPosition@{initialPosition}}
+\index{initialPosition@{initialPosition}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{initialPosition}]{\setlength{\rightskip}{0pt plus 5cm}XnPoint3D {\bf ZamusShoot::initialPosition}}}
+\label{classZamusShoot_a4ea6fd218d7bf2371e53b944042ec7cc}
+Initial position for the shoot.
+
+This is used as a point of reference to know when the shoot is too far. \hypertarget{classZamusShoot_a38bfd1383bd11ee5d68d22de84904a9f}{
+\index{ZamusShoot@{ZamusShoot}!player@{player}}
+\index{player@{player}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}XnUserID {\bf ZamusShoot::player}}}
+\label{classZamusShoot_a38bfd1383bd11ee5d68d22de84904a9f}
+Player who made this shoot.
+
+This variable is important to set the scores. \hypertarget{classZamusShoot_a1705d9588502985250c1732ee1215c41}{
+\index{ZamusShoot@{ZamusShoot}!position@{position}}
+\index{position@{position}!ZamusShoot@{ZamusShoot}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}XnPoint3D {\bf ZamusShoot::position}}}
+\label{classZamusShoot_a1705d9588502985250c1732ee1215c41}
+Actual position of the shoot. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{ZamusShoot_8h}{ZamusShoot.h}\item 
+src/\hyperlink{ZamusShoot_8cpp}{ZamusShoot.cpp}\end{DoxyCompactItemize}

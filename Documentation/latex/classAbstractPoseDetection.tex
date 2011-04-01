@@ -1,0 +1,125 @@
+\hypertarget{classAbstractPoseDetection}{
+\section{AbstractPoseDetection Class Reference}
+\label{classAbstractPoseDetection}\index{AbstractPoseDetection@{AbstractPoseDetection}}
+}
+
+
+This class handles the basics functions to code a pose for Kinect interaction.  
+
+
+
+
+{\ttfamily \#include $<$AbstractPoseDetection.h$>$}
+
+Inheritance diagram for AbstractPoseDetection:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.89189cm]{classAbstractPoseDetection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAbstractPoseDetection_ab75546d06563322c8c8f3ffc04375d02}{AbstractPoseDetection} ()
+\item 
+\hyperlink{classAbstractPoseDetection_a255ffffe8620b1c83b168f97bbd57fdd}{AbstractPoseDetection} (\hyperlink{classUserDetector}{UserDetector} $\ast$userD)
+\item 
+virtual \hyperlink{classAbstractPoseDetection_a017e98779fcc1340c69ef52911966ac3}{$\sim$AbstractPoseDetection} ()
+\item 
+virtual void \hyperlink{classAbstractPoseDetection_a2c80bcd1d7efd1f7ad7c0f6e51ab8af4}{detectPose} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classAbstractPoseDetection_ac3343980a1c6b822743b43c4274275e9}{isPosing} (XnUserID userID, double poseTime=0)=0
+\item 
+virtual void \hyperlink{classAbstractPoseDetection_a7351e9ac500669934ff823aaf0767076}{poseDetected} (XnUserID userID)=0
+\item 
+void \hyperlink{classAbstractPoseDetection_a6331815704045d8370972f5770bd8d5f}{setRequiredPoseTime} (float time)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserDetector}{UserDetector} $\ast$ \hyperlink{classAbstractPoseDetection_a20dccd0d1494d1ef0ec896e996b5e70b}{userDetector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the basics functions to code a pose for Kinect interaction. In this class we implement the functions that are necessary for user defined poses. This functions are those referents to pose time, pose definition and the action to take when a pose is detected, this class works as an abstract class for further pose specifications 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAbstractPoseDetection_ab75546d06563322c8c8f3ffc04375d02}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!AbstractPoseDetection@{AbstractPoseDetection}}
+\index{AbstractPoseDetection@{AbstractPoseDetection}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{AbstractPoseDetection}]{\setlength{\rightskip}{0pt plus 5cm}AbstractPoseDetection::AbstractPoseDetection ()}}
+\label{classAbstractPoseDetection_ab75546d06563322c8c8f3ffc04375d02}
+Constructor of the class. \hypertarget{classAbstractPoseDetection_a255ffffe8620b1c83b168f97bbd57fdd}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!AbstractPoseDetection@{AbstractPoseDetection}}
+\index{AbstractPoseDetection@{AbstractPoseDetection}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{AbstractPoseDetection}]{\setlength{\rightskip}{0pt plus 5cm}AbstractPoseDetection::AbstractPoseDetection ({\bf UserDetector} $\ast$ {\em userD})}}
+\label{classAbstractPoseDetection_a255ffffe8620b1c83b168f97bbd57fdd}
+Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userD}]a pointer to an user detector type. \end{DoxyParams}
+\hypertarget{classAbstractPoseDetection_a017e98779fcc1340c69ef52911966ac3}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!$\sim$AbstractPoseDetection@{$\sim$AbstractPoseDetection}}
+\index{$\sim$AbstractPoseDetection@{$\sim$AbstractPoseDetection}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{$\sim$AbstractPoseDetection}]{\setlength{\rightskip}{0pt plus 5cm}virtual AbstractPoseDetection::$\sim$AbstractPoseDetection ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classAbstractPoseDetection_a017e98779fcc1340c69ef52911966ac3}
+Class destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAbstractPoseDetection_a2c80bcd1d7efd1f7ad7c0f6e51ab8af4}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!detectPose@{detectPose}}
+\index{detectPose@{detectPose}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{detectPose}]{\setlength{\rightskip}{0pt plus 5cm}void AbstractPoseDetection::detectPose ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAbstractPoseDetection_a2c80bcd1d7efd1f7ad7c0f6e51ab8af4}
+Virtual function which specifies the framework of user pose detection, it can be reimplemented in further poses if needed. \hypertarget{classAbstractPoseDetection_ac3343980a1c6b822743b43c4274275e9}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!isPosing@{isPosing}}
+\index{isPosing@{isPosing}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{isPosing}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool AbstractPoseDetection::isPosing (XnUserID {\em userID}, \/  double {\em poseTime} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classAbstractPoseDetection_ac3343980a1c6b822743b43c4274275e9}
+Virtual function wich should be implemented for the pose detection, it returns if the user is posing. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user to pose. \item[{\em poseTime}]time of the user. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is posing, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBusterDetector_aa5b294c25df6ace744af596bd708c31c}{BusterDetector}, and \hyperlink{classIceRodDetector_a81a33e1302a9f8336d6e8bf49c421e2a}{IceRodDetector}.
+
+\hypertarget{classAbstractPoseDetection_a7351e9ac500669934ff823aaf0767076}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!poseDetected@{poseDetected}}
+\index{poseDetected@{poseDetected}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{poseDetected}]{\setlength{\rightskip}{0pt plus 5cm}virtual void AbstractPoseDetection::poseDetected (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classAbstractPoseDetection_a7351e9ac500669934ff823aaf0767076}
+Virtual function wich should be implemented for the pose detection, it specifies the actions that should be taken when the pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user. \end{DoxyParams}
+
+
+Implemented in \hyperlink{classBusterDetector_ac91be6357453deb9e15b3297b6299be3}{BusterDetector}, and \hyperlink{classIceRodDetector_aa2ef806316f44c93ea43f0b937c082fc}{IceRodDetector}.
+
+\hypertarget{classAbstractPoseDetection_a6331815704045d8370972f5770bd8d5f}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!setRequiredPoseTime@{setRequiredPoseTime}}
+\index{setRequiredPoseTime@{setRequiredPoseTime}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{setRequiredPoseTime}]{\setlength{\rightskip}{0pt plus 5cm}void AbstractPoseDetection::setRequiredPoseTime (float {\em time})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{classAbstractPoseDetection_a6331815704045d8370972f5770bd8d5f}
+This method changes the required pose time for the pose that will be set. 
+\begin{DoxyParams}{Parameters}
+\item[{\em time}]duration of the pose for detection. \end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classAbstractPoseDetection_a20dccd0d1494d1ef0ec896e996b5e70b}{
+\index{AbstractPoseDetection@{AbstractPoseDetection}!userDetector@{userDetector}}
+\index{userDetector@{userDetector}!AbstractPoseDetection@{AbstractPoseDetection}}
+\subsubsection[{userDetector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UserDetector}$\ast$ {\bf AbstractPoseDetection::userDetector}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAbstractPoseDetection_a20dccd0d1494d1ef0ec896e996b5e70b}
+User detector structure wich will be used to apply pose detection 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{AbstractPoseDetection_8h}{AbstractPoseDetection.h}\item 
+src/\hyperlink{AbstractPoseDetection_8cpp}{AbstractPoseDetection.cpp}\end{DoxyCompactItemize}

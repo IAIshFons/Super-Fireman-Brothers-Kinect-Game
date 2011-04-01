@@ -1,0 +1,189 @@
+\hypertarget{classZamus}{
+\section{Zamus Class Reference}
+\label{classZamus}\index{Zamus@{Zamus}}
+}
+
+
+This class hanldes all aspects about the detection and information referred to the \hyperlink{classZamus}{Zamus} players.  
+
+
+
+
+{\ttfamily \#include $<$Zamus.h$>$}
+
+Inheritance diagram for Zamus:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classZamus}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classZamus_a96d3e36d702b18721c5a600374b719d4}{zStages} \{ {\bfseries T\_\-STAGE\_\-1} =  0, 
+{\bfseries T\_\-STAGE\_\-2}, 
+{\bfseries T\_\-STAGE\_\-3}, 
+{\bfseries TRANSFORMED}
+ \}
+\item 
+enum \hyperlink{classZamus_a526a54006da10b674ba8f8f6f2e1babc}{bStatus} \{ {\bfseries DEACTIVATED}, 
+{\bfseries ACTIVATED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classZamus_aeacafafa18573498933213b913c335bd}{Zamus} (\hyperlink{classUserDetector}{UserDetector} $\ast$\hyperlink{classAbstractPoseDetection_a20dccd0d1494d1ef0ec896e996b5e70b}{userDetector})
+\item 
+\hyperlink{classZamus_a0f7b461022280659da44d83157c6572f}{$\sim$Zamus} ()
+\item 
+void \hyperlink{classZamus_a2b78080cf5fa4896c66c7bbdb1d4df90}{addShoot} (XnPoint3D position, \hyperlink{classVector3D}{Vector3D} direction, XnUserID p)
+\item 
+int \hyperlink{classZamus_ae2823178fa5fa30ddfa22e3b3ebd2332}{retBusterStatus} (XnUserID userID)
+\item 
+void \hyperlink{classZamus_ac7edda8c30064bfafd67351f40ca4a5d}{changeBusterStatus} (XnUserID userID, int status)
+\item 
+virtual int \hyperlink{classZamus_a727befa3608295027c9db889af9556c1}{retLisUserStage} (XnUserID userID)
+\item 
+virtual bool \hyperlink{classZamus_ab76c23d1189599fd0cbbce9352b4faeb}{isListened} (XnUserID userID)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classZamusShoot}{ZamusShoot} $>$ \hyperlink{classZamus_a8b8f7d06c64a6571521a82ef7b856189}{shoots}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class hanldes all aspects about the detection and information referred to the \hyperlink{classZamus}{Zamus} players. This class handles the detection of the pose to transform in \hyperlink{classZamus}{Zamus} and other things like the Buster status and the shoots made by the users. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classZamus_a526a54006da10b674ba8f8f6f2e1babc}{
+\index{Zamus@{Zamus}!bStatus@{bStatus}}
+\index{bStatus@{bStatus}!Zamus@{Zamus}}
+\subsubsection[{bStatus}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Zamus::bStatus}}}
+\label{classZamus_a526a54006da10b674ba8f8f6f2e1babc}
+Busteer status.
+
+
+\begin{DoxyItemize}
+\item DEACTIVATED the user can't shoot.
+\item ACTIVATED the user can shoot. 
+\end{DoxyItemize}\hypertarget{classZamus_a96d3e36d702b18721c5a600374b719d4}{
+\index{Zamus@{Zamus}!zStages@{zStages}}
+\index{zStages@{zStages}!Zamus@{Zamus}}
+\subsubsection[{zStages}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Zamus::zStages}}}
+\label{classZamus_a96d3e36d702b18721c5a600374b719d4}
+Specifies transformation stages.
+
+
+\begin{DoxyItemize}
+\item T\_\-STAGE\_\-1 the transformation is less than 35\%
+\item T\_\-STAGE\_\-2 the transformation is less than 70\%
+\item T\_\-STAGE\_\-3 the transformation is less than 100\% 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classZamus_aeacafafa18573498933213b913c335bd}{
+\index{Zamus@{Zamus}!Zamus@{Zamus}}
+\index{Zamus@{Zamus}!Zamus@{Zamus}}
+\subsubsection[{Zamus}]{\setlength{\rightskip}{0pt plus 5cm}Zamus::Zamus ({\bf UserDetector} $\ast$ {\em userDetector})}}
+\label{classZamus_aeacafafa18573498933213b913c335bd}
+\hyperlink{classZamus}{Zamus} constructor
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userDetector}]is a pointer to the userDetector of the game. \end{DoxyParams}
+\hypertarget{classZamus_a0f7b461022280659da44d83157c6572f}{
+\index{Zamus@{Zamus}!$\sim$Zamus@{$\sim$Zamus}}
+\index{$\sim$Zamus@{$\sim$Zamus}!Zamus@{Zamus}}
+\subsubsection[{$\sim$Zamus}]{\setlength{\rightskip}{0pt plus 5cm}Zamus::$\sim$Zamus ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classZamus_a0f7b461022280659da44d83157c6572f}
+\hyperlink{classZamus}{Zamus} destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classZamus_a2b78080cf5fa4896c66c7bbdb1d4df90}{
+\index{Zamus@{Zamus}!addShoot@{addShoot}}
+\index{addShoot@{addShoot}!Zamus@{Zamus}}
+\subsubsection[{addShoot}]{\setlength{\rightskip}{0pt plus 5cm}void Zamus::addShoot (XnPoint3D {\em position}, \/  {\bf Vector3D} {\em direction}, \/  XnUserID {\em p})}}
+\label{classZamus_a2b78080cf5fa4896c66c7bbdb1d4df90}
+Add shoot function.
+
+This function adds a new shoot to the vector shoots.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em position}]is the initial position of the water shoot. \item[{\em direction}]is the vector that representes the direction of the water shoot. \item[{\em p}]is the player's ID. \end{DoxyParams}
+\hypertarget{classZamus_ac7edda8c30064bfafd67351f40ca4a5d}{
+\index{Zamus@{Zamus}!changeBusterStatus@{changeBusterStatus}}
+\index{changeBusterStatus@{changeBusterStatus}!Zamus@{Zamus}}
+\subsubsection[{changeBusterStatus}]{\setlength{\rightskip}{0pt plus 5cm}void Zamus::changeBusterStatus (XnUserID {\em userID}, \/  int {\em status})}}
+\label{classZamus_ac7edda8c30064bfafd67351f40ca4a5d}
+Changes buster Status
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the id of the player. \item[{\em status}]to set the buster of the player. \end{DoxyParams}
+\hypertarget{classZamus_ab76c23d1189599fd0cbbce9352b4faeb}{
+\index{Zamus@{Zamus}!isListened@{isListened}}
+\index{isListened@{isListened}!Zamus@{Zamus}}
+\subsubsection[{isListened}]{\setlength{\rightskip}{0pt plus 5cm}bool Zamus::isListened (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classZamus_ab76c23d1189599fd0cbbce9352b4faeb}
+Returns if the user is currently listened
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is been tracked. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUserListener_aea80d4da192afaf0329cf92e4489fd0a}{UserListener}.
+
+\hypertarget{classZamus_ae2823178fa5fa30ddfa22e3b3ebd2332}{
+\index{Zamus@{Zamus}!retBusterStatus@{retBusterStatus}}
+\index{retBusterStatus@{retBusterStatus}!Zamus@{Zamus}}
+\subsubsection[{retBusterStatus}]{\setlength{\rightskip}{0pt plus 5cm}int Zamus::retBusterStatus (XnUserID {\em userID})}}
+\label{classZamus_ae2823178fa5fa30ddfa22e3b3ebd2332}
+Returns buster status.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer that represents the buster status. 
+\end{DoxyReturn}
+\hypertarget{classZamus_a727befa3608295027c9db889af9556c1}{
+\index{Zamus@{Zamus}!retLisUserStage@{retLisUserStage}}
+\index{retLisUserStage@{retLisUserStage}!Zamus@{Zamus}}
+\subsubsection[{retLisUserStage}]{\setlength{\rightskip}{0pt plus 5cm}int Zamus::retLisUserStage (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classZamus_a727befa3608295027c9db889af9556c1}
+Return listener user stage.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]is the player's id.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stage of the user. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUserListener_ad28b54b309b207f197ed238263d1014e}{UserListener}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classZamus_a8b8f7d06c64a6571521a82ef7b856189}{
+\index{Zamus@{Zamus}!shoots@{shoots}}
+\index{shoots@{shoots}!Zamus@{Zamus}}
+\subsubsection[{shoots}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf ZamusShoot} $>$ {\bf Zamus::shoots}}}
+\label{classZamus_a8b8f7d06c64a6571521a82ef7b856189}
+Vector of zamus shoots.
+
+This vector contain the information about all the shoots made by the players. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Zamus_8h}{Zamus.h}\item 
+src/\hyperlink{Zamus_8cpp}{Zamus.cpp}\end{DoxyCompactItemize}

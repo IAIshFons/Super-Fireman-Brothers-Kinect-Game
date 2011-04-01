@@ -1,0 +1,105 @@
+\hypertarget{classLinqSpawnIce}{
+\section{LinqSpawnIce Class Reference}
+\label{classLinqSpawnIce}\index{LinqSpawnIce@{LinqSpawnIce}}
+}
+
+
+This class handles the Ice spawned by \hyperlink{classLinq}{Linq}.  
+
+
+
+
+{\ttfamily \#include $<$LinqSpawnIce.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinqSpawnIce_a2cc89b811caf7c8e5e70bd95448e4440}{LinqSpawnIce} ()
+\item 
+\hyperlink{classLinqSpawnIce_a77656fb466afa730c8e1b885c6d2b78b}{LinqSpawnIce} (XnPoint3D pos, \hyperlink{classVector3D}{Vector3D} dir, XnUserID p)
+\item 
+bool \hyperlink{classLinqSpawnIce_a105bc2e17ead7417ab2f913b246db5d0}{isAlive} ()
+\item 
+void \hyperlink{classLinqSpawnIce_aa4db7809c414481a0e1ca7c2241af01d}{nextPosition} ()
+\item 
+void \hyperlink{classLinqSpawnIce_a07a8f94c11e0330e2cc4707c56f5cf6d}{drawSpawnIce} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+XnPoint3D \hyperlink{classLinqSpawnIce_a0ffb74516ffb532b8ba0184f88b5f642}{initialPosition}
+\item 
+XnPoint3D \hyperlink{classLinqSpawnIce_ad6c2e52cc6a9b88a3c089ae191939e13}{position}
+\item 
+\hyperlink{classVector3D}{Vector3D} \hyperlink{classLinqSpawnIce_a2da782100e9d1c549ea3b4c8cbadc2cb}{direction}
+\item 
+XnUserID \hyperlink{classLinqSpawnIce_aece9d500d9248dd9e6fe51b3ed1a7f6d}{player}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the Ice spawned by \hyperlink{classLinq}{Linq}. This class is the equivalent to the class \hyperlink{classZamusShoot}{ZamusShoot}. It has the information about the position and direction of the Ice. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classLinqSpawnIce_a2cc89b811caf7c8e5e70bd95448e4440}{
+\index{LinqSpawnIce@{LinqSpawnIce}!LinqSpawnIce@{LinqSpawnIce}}
+\index{LinqSpawnIce@{LinqSpawnIce}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{LinqSpawnIce}]{\setlength{\rightskip}{0pt plus 5cm}LinqSpawnIce::LinqSpawnIce ()}}
+\label{classLinqSpawnIce_a2cc89b811caf7c8e5e70bd95448e4440}
+Constructor \hypertarget{classLinqSpawnIce_a77656fb466afa730c8e1b885c6d2b78b}{
+\index{LinqSpawnIce@{LinqSpawnIce}!LinqSpawnIce@{LinqSpawnIce}}
+\index{LinqSpawnIce@{LinqSpawnIce}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{LinqSpawnIce}]{\setlength{\rightskip}{0pt plus 5cm}LinqSpawnIce::LinqSpawnIce (XnPoint3D {\em pos}, \/  {\bf Vector3D} {\em dir}, \/  XnUserID {\em p})}}
+\label{classLinqSpawnIce_a77656fb466afa730c8e1b885c6d2b78b}
+Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classLinqSpawnIce_a07a8f94c11e0330e2cc4707c56f5cf6d}{
+\index{LinqSpawnIce@{LinqSpawnIce}!drawSpawnIce@{drawSpawnIce}}
+\index{drawSpawnIce@{drawSpawnIce}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{drawSpawnIce}]{\setlength{\rightskip}{0pt plus 5cm}void LinqSpawnIce::drawSpawnIce ()}}
+\label{classLinqSpawnIce_a07a8f94c11e0330e2cc4707c56f5cf6d}
+Opengl function to display \hypertarget{classLinqSpawnIce_a105bc2e17ead7417ab2f913b246db5d0}{
+\index{LinqSpawnIce@{LinqSpawnIce}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{isAlive}]{\setlength{\rightskip}{0pt plus 5cm}bool LinqSpawnIce::isAlive ()}}
+\label{classLinqSpawnIce_a105bc2e17ead7417ab2f913b246db5d0}
+True if the spawnIce is not too far.
+
+\begin{DoxyReturn}{Returns}
+True if the ice dosen't whent too far. False in other case. 
+\end{DoxyReturn}
+\hypertarget{classLinqSpawnIce_aa4db7809c414481a0e1ca7c2241af01d}{
+\index{LinqSpawnIce@{LinqSpawnIce}!nextPosition@{nextPosition}}
+\index{nextPosition@{nextPosition}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{nextPosition}]{\setlength{\rightskip}{0pt plus 5cm}void LinqSpawnIce::nextPosition ()}}
+\label{classLinqSpawnIce_aa4db7809c414481a0e1ca7c2241af01d}
+Calculate next spawnIce position 
+
+\subsection{Member Data Documentation}
+\hypertarget{classLinqSpawnIce_a2da782100e9d1c549ea3b4c8cbadc2cb}{
+\index{LinqSpawnIce@{LinqSpawnIce}!direction@{direction}}
+\index{direction@{direction}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector3D} {\bf LinqSpawnIce::direction}}}
+\label{classLinqSpawnIce_a2da782100e9d1c549ea3b4c8cbadc2cb}
+Direction \hypertarget{classLinqSpawnIce_a0ffb74516ffb532b8ba0184f88b5f642}{
+\index{LinqSpawnIce@{LinqSpawnIce}!initialPosition@{initialPosition}}
+\index{initialPosition@{initialPosition}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{initialPosition}]{\setlength{\rightskip}{0pt plus 5cm}XnPoint3D {\bf LinqSpawnIce::initialPosition}}}
+\label{classLinqSpawnIce_a0ffb74516ffb532b8ba0184f88b5f642}
+Initial position of the spawnIce \hypertarget{classLinqSpawnIce_aece9d500d9248dd9e6fe51b3ed1a7f6d}{
+\index{LinqSpawnIce@{LinqSpawnIce}!player@{player}}
+\index{player@{player}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}XnUserID {\bf LinqSpawnIce::player}}}
+\label{classLinqSpawnIce_aece9d500d9248dd9e6fe51b3ed1a7f6d}
+Player who spawn this ice \hypertarget{classLinqSpawnIce_ad6c2e52cc6a9b88a3c089ae191939e13}{
+\index{LinqSpawnIce@{LinqSpawnIce}!position@{position}}
+\index{position@{position}!LinqSpawnIce@{LinqSpawnIce}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}XnPoint3D {\bf LinqSpawnIce::position}}}
+\label{classLinqSpawnIce_ad6c2e52cc6a9b88a3c089ae191939e13}
+Actual position 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{LinqSpawnIce_8h}{LinqSpawnIce.h}\item 
+src/LinqSpawnIce.cpp\end{DoxyCompactItemize}

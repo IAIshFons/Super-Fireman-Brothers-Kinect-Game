@@ -1,0 +1,100 @@
+\hypertarget{classBusterDetector}{
+\section{BusterDetector Class Reference}
+\label{classBusterDetector}\index{BusterDetector@{BusterDetector}}
+}
+
+
+This class handles the necessary functions for Buster pose detection.  
+
+
+
+
+{\ttfamily \#include $<$BusterDetector.h$>$}
+
+Inheritance diagram for BusterDetector:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classBusterDetector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBusterDetector_a9c2ad0b8a83b03fe55ab373fe63a2bf3}{BusterDetector} (\hyperlink{classZamus}{Zamus} $\ast$zamus, \hyperlink{classUserDetector}{UserDetector} $\ast$userD)
+\item 
+\hyperlink{classBusterDetector_a42cf936b77e8e2cd41e341ed2dbf2773}{$\sim$BusterDetector} ()
+\item 
+virtual bool \hyperlink{classBusterDetector_aa5b294c25df6ace744af596bd708c31c}{isPosing} (XnUserID userID, double poseTime=0.0)
+\item 
+virtual void \hyperlink{classBusterDetector_ac91be6357453deb9e15b3297b6299be3}{poseDetected} (XnUserID userID)
+\item 
+void \hyperlink{classBusterDetector_a220cb00cf59b19e778771c4638c7e572}{shootBuster} (XnUserID userID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the necessary functions for Buster pose detection. In this class we implement the functions that are necessary for \hyperlink{classZamus}{Zamus} Buster pose. This functions are those referents to pose detection, pose application and specifications of the actions to take when the named pose is detected.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAbstractPoseDetection}{AbstractPoseDetection} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBusterDetector_a9c2ad0b8a83b03fe55ab373fe63a2bf3}{
+\index{BusterDetector@{BusterDetector}!BusterDetector@{BusterDetector}}
+\index{BusterDetector@{BusterDetector}!BusterDetector@{BusterDetector}}
+\subsubsection[{BusterDetector}]{\setlength{\rightskip}{0pt plus 5cm}BusterDetector::BusterDetector ({\bf Zamus} $\ast$ {\em zamus}, \/  {\bf UserDetector} $\ast$ {\em userD})}}
+\label{classBusterDetector_a9c2ad0b8a83b03fe55ab373fe63a2bf3}
+Constructor of the class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em zamus}]pointer to a zamus struture. \item[{\em userD}]pointer to a user detector structure. \end{DoxyParams}
+\hypertarget{classBusterDetector_a42cf936b77e8e2cd41e341ed2dbf2773}{
+\index{BusterDetector@{BusterDetector}!$\sim$BusterDetector@{$\sim$BusterDetector}}
+\index{$\sim$BusterDetector@{$\sim$BusterDetector}!BusterDetector@{BusterDetector}}
+\subsubsection[{$\sim$BusterDetector}]{\setlength{\rightskip}{0pt plus 5cm}BusterDetector::$\sim$BusterDetector ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classBusterDetector_a42cf936b77e8e2cd41e341ed2dbf2773}
+Class destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBusterDetector_aa5b294c25df6ace744af596bd708c31c}{
+\index{BusterDetector@{BusterDetector}!isPosing@{isPosing}}
+\index{isPosing@{isPosing}!BusterDetector@{BusterDetector}}
+\subsubsection[{isPosing}]{\setlength{\rightskip}{0pt plus 5cm}bool BusterDetector::isPosing (XnUserID {\em userID}, \/  double {\em poseTime} = {\ttfamily 0.0})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBusterDetector_aa5b294c25df6ace744af596bd708c31c}
+Implementation of the isPosing function wich returns if the user is doing the Buster pose. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user to pose. \item[{\em poseTime}]time of the user. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user is posing for the buster, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractPoseDetection_ac3343980a1c6b822743b43c4274275e9}{AbstractPoseDetection}.
+
+\hypertarget{classBusterDetector_ac91be6357453deb9e15b3297b6299be3}{
+\index{BusterDetector@{BusterDetector}!poseDetected@{poseDetected}}
+\index{poseDetected@{poseDetected}!BusterDetector@{BusterDetector}}
+\subsubsection[{poseDetected}]{\setlength{\rightskip}{0pt plus 5cm}void BusterDetector::poseDetected (XnUserID {\em userID})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBusterDetector_ac91be6357453deb9e15b3297b6299be3}
+Specifies the actions that should be taken when the Buster pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]ID of the user. \end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractPoseDetection_a7351e9ac500669934ff823aaf0767076}{AbstractPoseDetection}.
+
+\hypertarget{classBusterDetector_a220cb00cf59b19e778771c4638c7e572}{
+\index{BusterDetector@{BusterDetector}!shootBuster@{shootBuster}}
+\index{shootBuster@{shootBuster}!BusterDetector@{BusterDetector}}
+\subsubsection[{shootBuster}]{\setlength{\rightskip}{0pt plus 5cm}void BusterDetector::shootBuster (XnUserID {\em userID})}}
+\label{classBusterDetector_a220cb00cf59b19e778771c4638c7e572}
+Method that is called when the Buster pose is detected. 
+\begin{DoxyParams}{Parameters}
+\item[{\em userID}]user ID of the user who is appliying the Buster pose. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{BusterDetector_8h}{BusterDetector.h}\item 
+src/\hyperlink{BusterDetector_8cpp}{BusterDetector.cpp}\end{DoxyCompactItemize}
